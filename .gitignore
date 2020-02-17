@@ -12,6 +12,10 @@ package-lock.json
 # production
 /build
 
+# heroku
+*.log
+tmp
+
 # misc
 .DS_Store
 .env.local
