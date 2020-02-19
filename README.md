@@ -4,9 +4,9 @@
 
 🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
-# 1️⃣ Title of project goes here
+# GitStats
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+You can find the deployed project at [https://gitstats.dev](https://gitstats.dev).
 
 ## 4️⃣ Contributors
 
@@ -33,18 +33,17 @@
 
 ## Project Overview
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+[Trello Board](https://trello.com/b/8y6kkRLr/labspt7-github-commit-analysis)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+[Product Canvas](https://www.notion.so/2c1915a7a213438db3798cb86028bde8?v=20853bb7fd2a49e288a9f87efffc10ce)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+[UX Design files](https://www.figma.com/file/0um1GtskoFJk0pWFHoC7Bt/GitHub_Commit_Analyzer?node-id=3363%3A629)
 
-🚫 Replace lorem ipsum with a description of your project
+### Description:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+People interact with repositories all the time, but there is no visibility into how it correlates to the "success" of the repositories. There are plenty of articles out there outlining GitHub "best practices", but the vast majority seem to be subjective, based on intuition and experience, not evidence-based.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+Our Mission is to make open source a *better experience* for developers and maintainers by committing to actionable insights for project success.
 
 ### 4️⃣ Key Features
 
@@ -54,32 +53,36 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 -    feature four
 -    feature five
 
-## 1️⃣ Tech Stack
+## Tech Stack
 
 ### Front end built using:
 
-#### _Front end framework goes here_
+- *Framework:* [React](https://reactjs.org/)
+  > Our web team is most comfortable with this framework and it's available toolset. We feel React is well suited to the type of webapp we want to build and we can move from an SPA to a PWA with relative ease to potentially allow some offline use.
+- *State Management:*
+  - [Redux](https://redux.js.org/) for high-frequency state change management
+    > Most comfortable for our web team and provides an immutable single source of truth built to be able to handle high-frequency updates.
+  - [ReactContext](https://reactjs.org/docs/context.html) for low-frequency state change management
+    > Built-in to React and quite useful for passing state between multiple components but not suited to high-frequency updates.
+- *Data Visualization:* [ReactD3](https://react-d3-library.github.io/)
+  > Robust library well suited to our purposes. Although there may be a small learning curve for what we aim to provide, we believe the time spent therein will be fruitful.
+- *Styling Library:* [Primer Components](https://primer.style/components/)
+  > Easy to use styling library provided by GitHub that allows us to make sure our product feels familiar to our users.
 
-🚫 Why did you choose this framework?
+#### Front end deployed to `Heroku`
 
--    point one
--    point two
--    point three
--    point four
+### [Back end](https://github.com/Lambda-School-Labs/github-commit-analysis-be) built using:
 
-🚫List the rest of the front end features and libraries in the same format as the framework above.
-
-#### Front end deployed to `🚫insert service here`
-
-#### [Back end](🚫link to back end repo here) built using:
-
-#### 🚫 back end framework goes here
-
--    point one
--    point two
--    point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+- *Database:* [PostgreSQL](https://www.postgresql.org/)
+  > The standard to follow per the Labs Engineering Standards.
+- *API Framework:* [GraphQL](https://graphql.org/)
+  > Although this will carry a slight learning curve for our team we believe that our product is best suited to this style. Beyond that, we also plan on using GitHubs v4 GraphQL API so we aim to have style consistency through our project.
+- *RunTime:* [NodeJS](https://nodejs.org/)
+  > We feel that product quality will be improved through the sharing of common knowledge and reusable components.
+- *Web Application Framework:* [Express](https://expressjs.com/)
+  > Minimal and Flexible. We feel that it provides a robust set of features that will support our development process.
+  
+#### Back end deployed to `Heroku`
 
 # APIs
 
@@ -194,4 +197,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](🚫_link to your backend readme here_) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/github-commit-analysis-be/blob/master/README.md) for details on the backend of our project.
