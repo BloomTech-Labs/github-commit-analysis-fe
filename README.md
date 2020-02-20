@@ -10,11 +10,18 @@ You can find the deployed project at [https://gitstats.dev](https://gitstats.dev
 
 ## Contributors
 
-| [Dakota Pope](https://github.com/Dpgofast) | [Elisabeth Shah](https://github.com/ElisabethShah) | [Gwen Purcell](https://github.com/GwenStacey) | [Martin Lehman](https://github.com/martinclehman) | [Davorin Piljić](https://github.com/davorinpiljic) | [Eric SarragaLugo](https://github.com/ericlugo) | [Robert Thompson](https://github.com/rthom2178) | [Ruben Rosa](https://github.com/netrunnerd) |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Team Lead | Data Science | Data Science | Data Science | Full-Stack Web Development | Full-Stack Web Development | Full-Stack Web Development | Full-Stack Web Development |
-| [<img src="DAKOTA" width = "200" />](https://github.com/Dpgofast) | [<img src="ELSY" width = "200" />](https://github.com/ElisabethShah) | [<img src="GWEN" width = "200" />](https://github.com/GwenStacey) | [<img src="MARTIN" width = "200" />](https://github.com/martinclehman) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/davorinpiljic) | [<img src="ERIC" width = "200" />](https://github.com/ericlugo) | [<img src="ROBERT" width = "200" />](https://github.com/rthom2178) | [<img src="RUBY" width = "200" />](https://github.com/netrunnerd) | 
-| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Dpgofast) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakota-pope-116414176/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ElisabethShah) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/elisabeth-dawn-shah/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/GwenStacey) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gwen-purcell-9a6b3698/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/martinclehman) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/davorinpiljic) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ericlugo) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/eric-sarragalugo/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/rthom2178) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/robert-thompson-27238519a/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/netrunnerd) |
+| [Dakota Pope](https://github.com/Dpgofast) | [Elisabeth Shah](https://github.com/ElisabethShah) | [Gwen Purcell](https://github.com/GwenStacey) | [Martin Lehman](https://github.com/martinclehman) |
+| :---: | :---: | :---: | :---: |
+| Team Lead | Data Science | Data Science | Data Science |
+| [<img src="contributors/dakota_pope.jpg" width = "200" />](https://github.com/Dpgofast) | [<img src="contributors/elisabeth_shah.jpg" width = "200" />](https://github.com/ElisabethShah) | [<img src="contributors/gwen_purcell.jpg" width = "200" />](https://github.com/GwenStacey) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/martinclehman) |
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Dpgofast) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakota-pope-116414176/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ElisabethShah) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/elisabeth-dawn-shah/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/GwenStacey) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gwen-purcell-9a6b3698/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/martinclehman) |
+
+| [Davorin Piljić](https://github.com/davorinpiljic) | [Eric SarragaLugo](https://github.com/ericlugo) | [Robert Thompson](https://github.com/rthom2178) | [Ruben Rosa](https://github.com/netrunnerd) |
+| :---: | :---: | :---: | :---: |
+| Full-Stack Web Development | Full-Stack Web Development | Full-Stack Web Development | Full-Stack Web Development |
+| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/davorinpiljic) | [<img src="contributors/eric_lugo.jpg" width = "200" />](https://github.com/ericlugo) | [<img src="contributors/robert_thompson.jpg" width = "200" />](https://github.com/rthom2178) | [<img src="contributors/ruben_rosa.png" width = "200" />](https://github.com/netrunnerd) | 
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/davorinpiljic) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ericlugo) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/eric-sarragalugo/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/rthom2178) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/robert-thompson-27238519a/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/netrunnerd) |
+
 
 <br>
 <br>
@@ -31,11 +38,7 @@ You can find the deployed project at [https://gitstats.dev](https://gitstats.dev
 
 ## Project Overview
 
-[Trello Board](https://trello.com/b/8y6kkRLr/labspt7-github-commit-analysis)
-
-[Product Canvas](https://www.notion.so/2c1915a7a213438db3798cb86028bde8?v=20853bb7fd2a49e288a9f87efffc10ce)
-
-[UX Design files](https://www.figma.com/file/0um1GtskoFJk0pWFHoC7Bt/GitHub_Commit_Analyzer?node-id=3363%3A629)
+> [Trello Board](https://trello.com/b/8y6kkRLr/labspt7-github-commit-analysis) <br /> [Product Canvas](https://www.notion.so/2c1915a7a213438db3798cb86028bde8?v=20853bb7fd2a49e288a9f87efffc10ce) <br /> [UX Design files](https://www.figma.com/file/0um1GtskoFJk0pWFHoC7Bt/GitHub_Commit_Analyzer?node-id=3363%3A629)
 
 ### Description:
 
@@ -55,29 +58,28 @@ Our Mission is to make open source a *better experience* for developers and main
 
 ### Front end built using:
 
-- *Framework:* [React](https://reactjs.org/)
+- *Framework:* [`React`](https://reactjs.org/)
   > Our web team is most comfortable with this framework and it's available toolset. We feel React is well suited to the type of webapp we want to build and we can move from an SPA to a PWA with relative ease to potentially allow some offline use.
-- *State Management:*
-  - [Redux](https://redux.js.org/) for high-frequency state change management
-    > Most comfortable for our web team and provides an immutable single source of truth built to be able to handle high-frequency updates.
-  - [ReactContext](https://reactjs.org/docs/context.html) for low-frequency state change management
-    > Built-in to React and quite useful for passing state between multiple components but not suited to high-frequency updates.
-- *Data Visualization:* [ReactD3](https://react-d3-library.github.io/)
+- *High-Frequency State Management:* [`Redux`](https://redux.js.org/)
+  > Most comfortable for our web team and provides an immutable single source of truth built to be able to handle high-frequency updates.
+- *Low-Frequency State Management:* [`React's ContextAPI`](https://reactjs.org/docs/context.html)
+  > Built-in to React and quite useful for passing state between multiple components but not suited to high-frequency updates.
+- *Data Visualization:* [`ReactD3`](https://react-d3-library.github.io/)
   > Robust library well suited to our purposes. Although there may be a small learning curve for what we aim to provide, we believe the time spent therein will be fruitful.
-- *Styling Library:* [Primer Components](https://primer.style/components/)
+- *Styling Library:* [`Primer Components`](https://primer.style/components/)
   > Easy to use styling library provided by GitHub that allows us to make sure our product feels familiar to our users.
 
 #### Front end deployed to `Heroku`
 
 ### [Back end](https://github.com/Lambda-School-Labs/github-commit-analysis-be) built using:
 
-- *Database:* [PostgreSQL](https://www.postgresql.org/)
+- *Database:* [`PostgreSQL`](https://www.postgresql.org/)
   > The standard to follow per the Labs Engineering Standards.
-- *API Framework:* [GraphQL](https://graphql.org/)
+- *API Framework:* [`GraphQL`](https://graphql.org/)
   > Although this will carry a slight learning curve for our team we believe that our product is best suited to this style. Beyond that, we also plan on using GitHubs v4 GraphQL API so we aim to have style consistency through our project.
-- *RunTime:* [NodeJS](https://nodejs.org/)
+- *RunTime:* [`NodeJS`](https://nodejs.org/)
   > We feel that product quality will be improved through the sharing of common knowledge and reusable components.
-- *Web Application Framework:* [Express](https://expressjs.com/)
+- *Web Application Framework:* [`Express`](https://expressjs.com/)
   > Minimal and Flexible. We feel that it provides a robust set of features that will support our development process.
   
 #### Back end deployed to `Heroku`
