@@ -27,7 +27,7 @@ jobs:
 
   coverage:
     needs: [build]
-    name: Test and Publish Code Coverage to CC
+    name: Run Test and Publish Code Coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -40,5 +40,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: npm test --coverage --watchAll=false
+          coverageCommand: npm run coverage
           debug: true
