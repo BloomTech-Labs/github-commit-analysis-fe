@@ -1,6 +1,6 @@
 🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
 
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by.  Make sure to delete the numbers by the end of Labs.
+🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
 
 🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
@@ -8,33 +8,28 @@
 
 You can find the deployed project at [https://gitstats.dev](https://gitstats.dev).
 
+![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![Deploy Vendor](https://img.shields.io/badge/deployed_through-Heroku-7056bf.svg)
+<br />
+[![Maintainability](https://api.codeclimate.com/v1/badges/f3628f408097598f5a83/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/github-commit-analysis-fe/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f3628f408097598f5a83/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/github-commit-analysis-fe/test_coverage)
+<br />
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![React](https://img.shields.io/badge/react-v16.12.0-blue.svg)
+
 ## Contributors
 
-| [Dakota Pope](https://github.com/Dpgofast) | [Elisabeth Shah](https://github.com/ElisabethShah) | [Gwen Purcell](https://github.com/GwenStacey) | [Martin Lehman](https://github.com/martinclehman) |
-| :---: | :---: | :---: | :---: |
-| Team Lead | Data Science | Data Science | Data Science |
-| [<img src="contributors/dakota_pope.jpg" width = "200" />](https://github.com/Dpgofast) | [<img src="contributors/elisabeth_shah.jpg" width = "200" />](https://github.com/ElisabethShah) | [<img src="contributors/gwen_purcell.jpg" width = "200" />](https://github.com/GwenStacey) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/martinclehman) |
-| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Dpgofast) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakota-pope-116414176/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ElisabethShah) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/elisabeth-dawn-shah/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/GwenStacey) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gwen-purcell-9a6b3698/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/martinclehman) |
+|                                                                                          [Dakota Pope](https://github.com/Dpgofast)                                                                                          |                                                                                       [Elisabeth Shah](https://github.com/ElisabethShah)                                                                                        |                                                                                         [Gwen Purcell](https://github.com/GwenStacey)                                                                                          |                                                    [Martin Lehman](https://github.com/martinclehman)                                                     |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                          Team Lead                                                                                                           |                                                                                                          Data Science                                                                                                           |                                                                                                          Data Science                                                                                                          |                                                                       Data Science                                                                       |
+|                                                                   [<img src="contributors/dakota_pope.jpg" width = "200" />](https://github.com/Dpgofast)                                                                    |                                                                 [<img src="contributors/elisabeth_shah.jpg" width = "200" />](https://github.com/ElisabethShah)                                                                 |                                                                   [<img src="contributors/gwen_purcell.jpg" width = "200" />](https://github.com/GwenStacey)                                                                   | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/martinclehman) |
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Dpgofast) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakota-pope-116414176/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ElisabethShah) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/elisabeth-dawn-shah/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/GwenStacey) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gwen-purcell-9a6b3698/) |                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/martinclehman)                                |
 
-| [Davorin Piljić](https://github.com/davorinpiljic) | [Eric SarragaLugo](https://github.com/ericlugo) | [Robert Thompson](https://github.com/rthom2178) | [Ruben Rosa](https://github.com/netrunnerd) |
-| :---: | :---: | :---: | :---: |
-| Full-Stack Web Development | Full-Stack Web Development | Full-Stack Web Development | Full-Stack Web Development |
-| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/davorinpiljic) | [<img src="contributors/eric_lugo.jpg" width = "200" />](https://github.com/ericlugo) | [<img src="contributors/robert_thompson.jpg" width = "200" />](https://github.com/rthom2178) | [<img src="contributors/ruben_rosa.png" width = "200" />](https://github.com/netrunnerd) | 
-| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/davorinpiljic) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ericlugo) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/eric-sarragalugo/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/rthom2178) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/robert-thompson-27238519a/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/netrunnerd) |
-
-
-<br>
-<br>
-
-🚫 4️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
-
-![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
-![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
-![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-🚫 more info on using badges [here](https://github.com/badges/shields)
+|                                                    [Davorin Piljić](https://github.com/davorinpiljic)                                                    |                                                                                     [Eric SarragaLugo](https://github.com/ericlugo)                                                                                     |                                                                                          [Robert Thompson](https://github.com/rthom2178)                                                                                          |                       [Ruben Rosa](https://github.com/netrunnerd)                        |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
+|                                                                Full-Stack Web Development                                                                |                                                                                               Full-Stack Web Development                                                                                                |                                                                                                    Full-Stack Web Development                                                                                                     |                                Full-Stack Web Development                                |
+| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/davorinpiljic) |                                                                  [<img src="contributors/eric_lugo.jpg" width = "200" />](https://github.com/ericlugo)                                                                  |                                                                   [<img src="contributors/robert_thompson.jpg" width = "200" />](https://github.com/rthom2178)                                                                    | [<img src="contributors/ruben_rosa.png" width = "200" />](https://github.com/netrunnerd) |
+|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/davorinpiljic)                                | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ericlugo) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/eric-sarragalugo/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/rthom2178) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/robert-thompson-27238519a/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/netrunnerd)  |
 
 ## Project Overview
 
@@ -44,44 +39,45 @@ You can find the deployed project at [https://gitstats.dev](https://gitstats.dev
 
 People interact with repositories all the time, but there is no visibility into how it correlates to the "success" of the repositories. There are plenty of articles out there outlining GitHub "best practices", but the vast majority seem to be subjective, based on intuition and experience, not evidence-based.
 
-Our Mission is to make open source a *better experience* for developers and maintainers by committing to actionable insights for project success.
+Our Mission is to make open source a _better experience_ for developers and maintainers by committing to actionable insights for project success.
 
 ### 4️⃣ Key Features
 
--    feature one
--    feature two
--    feature three
--    feature four
--    feature five
+- feature one
+- feature two
+- feature three
+- feature four
+- feature five
 
 ## Tech Stack
 
 ### Front end built using:
 
-- *Framework:* [`React`](https://reactjs.org/)
+- _Framework:_ [`React`](https://reactjs.org/)
   > Our web team is most comfortable with this framework and it's available toolset. We feel React is well suited to the type of webapp we want to build and we can move from an SPA to a PWA with relative ease to potentially allow some offline use.
-- *High-Frequency State Management:* [`Redux`](https://redux.js.org/)
+- _High-Frequency State Management:_ [`Redux`](https://redux.js.org/)
   > Most comfortable for our web team and provides an immutable single source of truth built to be able to handle high-frequency updates.
-- *Low-Frequency State Management:* [`React's ContextAPI`](https://reactjs.org/docs/context.html)
+- _Low-Frequency State Management:_ [`React's ContextAPI`](https://reactjs.org/docs/context.html)
   > Built-in to React and quite useful for passing state between multiple components but not suited to high-frequency updates.
-- *Data Visualization:* [`ReactD3`](https://react-d3-library.github.io/)
+- _Data Visualization:_ [`ReactD3`](https://react-d3-library.github.io/)
   > Robust library well suited to our purposes. Although there may be a small learning curve for what we aim to provide, we believe the time spent therein will be fruitful.
-- *Styling Library:* [`Primer Components`](https://primer.style/components/)
+- _Styling Library:_ [`Primer Components`](https://primer.style/components/)
   > Easy to use styling library provided by GitHub that allows us to make sure our product feels familiar to our users.
 
 #### Front end deployed to `Heroku`
 
 ### [Back end](https://github.com/Lambda-School-Labs/github-commit-analysis-be) built using:
 
-- *Database:* [`PostgreSQL`](https://www.postgresql.org/)
+- _Database:_ [`PostgreSQL`](https://www.postgresql.org/)
   > The standard to follow per the Labs Engineering Standards.
-- *API Framework:* [`GraphQL`](https://graphql.org/)
+- _API Framework:_ [`GraphQL`](https://graphql.org/)
   > Although this will carry a slight learning curve for our team we believe that our product is best suited to this style. Beyond that, we also plan on using GitHubs v4 GraphQL API so we aim to have style consistency through our project.
-- *RunTime:* [`NodeJS`](https://nodejs.org/)
+- _RunTime:_ [`NodeJS`](https://nodejs.org/)
   > We feel that product quality will be improved through the sharing of common knowledge and reusable components.
-- *Web Application Framework:* [`Express`](https://expressjs.com/)
+- _Web Application Framework:_ [`Express`](https://expressjs.com/)
+
   > Minimal and Flexible. We feel that it provides a robust set of features that will support our development process.
-  
+
 #### Back end deployed to `Heroku`
 
 # APIs
@@ -98,23 +94,15 @@ Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do
 
 This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
 
-## 3️⃣ Misc API here
+## [GitHub GraphQL API v4](https://developer.github.com/v4/)
 
-🚫Replace text below with a description of the API
+Main data source for our app. Will provide all of the base information that the app will display.
 
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-## 3️⃣ Misc API here
+## 3️⃣ Other Misc API here
 
 🚫Replace text below with a description of the API
 
 When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-Volunteering your time; it pays you and your whole community fantastic dividends. Maybe there's a happy little waterfall happening over here. You can spend all day playing with mountains. We don't have to be committed. We are just playing here. You have freedom here. The only guide is your heart. It's cold, but it's beautiful.
 
 # 3️⃣ Environment Variables
 
@@ -166,12 +154,13 @@ When contributing to this repository, please first discuss the change you wish t
 Please note we have a [code of conduct](./CODE_OF_CONDUCT.md). Please follow it in all your interactions with the project.
 
 ## Issue/Bug Request
-   
- **If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
- - Check first to see if your issue has already been reported.
- - Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
- - Create a live example of the problem.
- - Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes,  where you believe the issue is originating from, and any potential solutions you have considered.
+
+**If you are having an issue with the existing project code, please submit a bug report under the following guidelines:**
+
+- Check first to see if your issue has already been reported.
+- Check to see if the issue has recently been fixed by attempting to reproduce the issue using the latest master branch in the repository.
+- Create a live example of the problem.
+- Submit a detailed bug report including your environment & browser, steps to reproduce the issue, actual and expected outcomes, where you believe the issue is originating from, and any potential solutions you have considered.
 
 ### Feature Requests
 
