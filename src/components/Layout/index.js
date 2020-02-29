@@ -1,9 +1,12 @@
 import React from 'react';
 
+import Navbar from './Navbar';
+import Footer from './Footer';
+
 export default (props) => (
-  <div>
-    <h1>Hello World</h1>
-    <p>The content below is inside of the Layout component!</p>
+  <React.Fragment>
+    <Navbar />
     {props.children}
-  </div>
+    <Footer />
+  </React.Fragment>
 );

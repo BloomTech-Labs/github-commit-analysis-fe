@@ -1,25 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import { SecureRoute, ImplicitCallback } from '@okta/okta-react';
 
-import Navbar from './components/Layout/Navbar';
 import Layout from './components/Layout';
+import Login from './components/auth/Login';
 import Home from './pages/home';
 import Dashboard from './pages/dashboard';
 
-function App() {
-  return (
-    <div className='App'>
-      <Router>
-        <Navbar />
-        <Layout>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/dashboard' component={Dashboard} />
-          </Switch>
-        </Layout>
-      </Router>
-    </div>
-  );
-}
+const App = () => (
+  <Layout>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <SecureRoute exact path='/dashboard' component={Dashboard} />
+      <Route
+        path='/login'
+        render={() => <Login baseUrl='https://dev-389735.okta.com' />}
+      />
+      <Route path='/implicit/callback' component={ImplicitCallback} />
+    </Switch>
+  </Layout>
+);
 
 export default App;
