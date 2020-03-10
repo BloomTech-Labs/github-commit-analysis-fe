@@ -1,24 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
 
-import Navbar from './components/Layout/Navbar';
-import Layout from './components/Layout';
-import Home from './pages/home';
-import Dashboard from './pages/dashboard';
+import { useUser } from './context/user-context.js';
+import { Layout } from './components';
+
+const Home = React.lazy(() => import('./pages/home'));
+const Dashboard = React.lazy(() => import('./pages/dashboard'));
 
 function App() {
+  const user = useUser();
+
   return (
-    <div className='App'>
-      <Router>
-        <Navbar />
-        <Layout>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/dashboard' component={Dashboard} />
-          </Switch>
-        </Layout>
-      </Router>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Layout user={user}>{user ? <Dashboard /> : <Home />}</Layout>
+    </Suspense>
   );
 }
 
