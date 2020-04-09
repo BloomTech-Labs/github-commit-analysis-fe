@@ -1,6 +1,8 @@
 import React from 'react';
 import { GoGitCommit } from 'react-icons/go';
 
+import { useAppState } from '../context/app-state-context.js';
+
 const Spinner = (props) => <GoGitCommit className='spinner' {...props} />;
 const FullPageSpinner = () => (
   <div className='full_page_spinner'>
@@ -9,15 +11,14 @@ const FullPageSpinner = () => (
 );
 
 const LoginButton = () => (
-  <a role='button' href='http://localhost:4000/auth/github'>
-    Login with GitHub
+  <a role='button' href={`${process.env.REACT_APP_BACKEND_URL}/auth/github`}>
+    <button>Login with GitHub</button>
   </a>
 );
-const LogoutButton = () => (
-  <a role='button' href='http://localhost:4000/auth/logout'>
-    Logout
-  </a>
-);
+const LogoutButton = () => {
+  const { logout } = useAppState();
+  return <button onClick={logout}>Logout</button>;
+};
 
 const Header = ({ user }) => (
   <header>
@@ -28,20 +29,25 @@ const Header = ({ user }) => (
 
 const Footer = () => (
   <footer>
-    <h1>This is the Footer!</h1>
+    <h1> </h1>
   </footer>
 );
 
-const Layout = ({ user, children }) => (
-  <React.Fragment>
-    <Header user={null} />
-    <main>
-      <h1>Hello World</h1>
-      <p>This is inside of the Layout component!</p>
-      {children}
-    </main>
-    <Footer />
-  </React.Fragment>
-);
+const Layout = ({ children }) => {
+  const {
+    state: { user },
+  } = useAppState();
+
+  return (
+    <React.Fragment>
+      <Header user={user} />
+      <main>
+        <h1>{user ? `Hello ${user.name.split(' ')[0]}!` : `Welcome!`}</h1>
+        {children}
+      </main>
+      <Footer />
+    </React.Fragment>
+  );
+};
 
 export { Spinner, FullPageSpinner, Layout };

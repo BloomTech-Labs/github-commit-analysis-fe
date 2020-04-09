@@ -1,10 +1,7 @@
 import React from 'react';
 
-import { AuthProvider } from './auth-context';
-import { UserProvider } from './user-context';
+import { AppStateProvider } from './app-state-context';
 
 export default ({ children }) => (
-  <AuthProvider>
-    <UserProvider>{children}</UserProvider>
-  </AuthProvider>
+  <AppStateProvider>{children}</AppStateProvider>
 );
