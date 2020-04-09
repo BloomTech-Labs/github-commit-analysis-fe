@@ -1,9 +1,3 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.
-
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
-
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
-
 # GitStats
 
 You can find the deployed project at [https://gitstats.dev](https://gitstats.dev).
@@ -19,17 +13,11 @@ You can find the deployed project at [https://gitstats.dev](https://gitstats.dev
 
 ## Contributors
 
-|                                                                                          [Dakota Pope](https://github.com/Dpgofast)                                                                                          |                                                                                       [Elisabeth Shah](https://github.com/ElisabethShah)                                                                                        |                                                                                         [Gwen Purcell](https://github.com/GwenStacey)                                                                                          |                                                    [Martin Lehman](https://github.com/martinclehman)                                                     |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                                          Team Lead                                                                                                           |                                                                                                          Data Science                                                                                                           |                                                                                                          Data Science                                                                                                          |                                                                       Data Science                                                                       |
-|                                                                   [<img src="contributors/dakota_pope.jpg" width = "200" />](https://github.com/Dpgofast)                                                                    |                                                                 [<img src="contributors/elisabeth_shah.jpg" width = "200" />](https://github.com/ElisabethShah)                                                                 |                                                                   [<img src="contributors/gwen_purcell.jpg" width = "200" />](https://github.com/GwenStacey)                                                                   | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/martinclehman) |
-| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Dpgofast) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakota-pope-116414176/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ElisabethShah) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/elisabeth-dawn-shah/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/GwenStacey) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gwen-purcell-9a6b3698/) |                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/martinclehman)                                |
-
-|                                                    [Davorin Piljić](https://github.com/davorinpiljic)                                                    |                                                                                     [Eric SarragaLugo](https://github.com/ericlugo)                                                                                     |                                                                                          [Robert Thompson](https://github.com/rthom2178)                                                                                          |                       [Ruben Rosa](https://github.com/netrunnerd)                        |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
-|                                                                Full-Stack Web Development                                                                |                                                                                               Full-Stack Web Development                                                                                                |                                                                                                    Full-Stack Web Development                                                                                                     |                                Full-Stack Web Development                                |
-| [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/davorinpiljic) |                                                                  [<img src="contributors/eric_lugo.jpg" width = "200" />](https://github.com/ericlugo)                                                                  |                                                                   [<img src="contributors/robert_thompson.jpg" width = "200" />](https://github.com/rthom2178)                                                                    | [<img src="contributors/ruben_rosa.png" width = "200" />](https://github.com/netrunnerd) |
-|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/davorinpiljic)                                | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ericlugo) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/eric-sarragalugo/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/rthom2178) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/robert-thompson-27238519a/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/netrunnerd)  |
+|                                                                                          [Dakota Pope](https://github.com/Dpgofast)                                                                                          |                                                                                       [Elisabeth Shah](https://github.com/ElisabethShah)                                                                                        |                                                                                         [Gwen Purcell](https://github.com/GwenStacey)                                                                                          |                                                    [Martin Lehman](https://github.com/martinclehman)                                                     |                                                                                     [Eric SarragaLugo](https://github.com/ericlugo)                                                                                     |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                          Team Lead                                                                                                           |                                                                                                          Data Science                                                                                                           |                                                                                                          Data Science                                                                                                          |                                                                       Data Science                                                                       |                                                                                               Full-Stack Web Development                                                                                                |
+|                                                                   [<img src="contributors/dakota_pope.jpg" width = "200" />](https://github.com/Dpgofast)                                                                    |                                                                 [<img src="contributors/elisabeth_shah.jpg" width = "200" />](https://github.com/ElisabethShah)                                                                 |                                                                   [<img src="contributors/gwen_purcell.jpg" width = "200" />](https://github.com/GwenStacey)                                                                   | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/martinclehman) |                                                                  [<img src="contributors/eric_lugo.jpg" width = "200" />](https://github.com/ericlugo)                                                                  |
+| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Dpgofast) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakota-pope-116414176/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ElisabethShah) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/elisabeth-dawn-shah/) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/GwenStacey) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gwen-purcell-9a6b3698/) |                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/martinclehman)                                | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ericlugo) [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/eric-sarragalugo/) |
 
 ## Project Overview
 
@@ -41,13 +29,12 @@ People interact with repositories all the time, but there is no visibility into 
 
 Our Mission is to make open source a _better experience_ for developers and maintainers by committing to actionable insights for project success.
 
-### 4️⃣ Key Features
+### Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Social SignIn with GitHub
+- Automatic Account Sync
+- Easy Repo Selection
+- Easy Repo Search
 
 ## Tech Stack
 
@@ -55,8 +42,6 @@ Our Mission is to make open source a _better experience_ for developers and main
 
 - _Framework:_ [`React`](https://reactjs.org/)
   > Our web team is most comfortable with this framework and it's available toolset. We feel React is well suited to the type of webapp we want to build and we can move from an SPA to a PWA with relative ease to potentially allow some offline use.
-- _High-Frequency State Management:_ [`Redux`](https://redux.js.org/)
-  > Most comfortable for our web team and provides an immutable single source of truth built to be able to handle high-frequency updates.
 - _Low-Frequency State Management:_ [`React's ContextAPI`](https://reactjs.org/docs/context.html)
   > Built-in to React and quite useful for passing state between multiple components but not suited to high-frequency updates.
 - _Data Visualization:_ [`ReactD3`](https://react-d3-library.github.io/)
@@ -82,44 +67,27 @@ Our Mission is to make open source a _better experience_ for developers and main
 
 # APIs
 
-## 2️⃣ Authentication API here
+## Authentication API here
 
-🚫Replace text below with a description of the API
+Custom Social SignIn and Authentication with Passport JS on Node/Express.
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
-
-## 2️⃣ Payment API here
-
-🚫Replace text below with a description of the API
-
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
+- Redirect to `${process.env.REACT_APP_BACKEND_URL}/auth/github` to initiate Authentication process.
+- User must authorize sign in through GitHub.
+- Passport JS will grab code and use it to verify and obtain token which will be returned to front-end.
 
 ## [GitHub GraphQL API v4](https://developer.github.com/v4/)
 
 Main data source for our app. Will provide all of the base information that the app will display.
 
-## 3️⃣ Other Misc API here
-
-🚫Replace text below with a description of the API
-
-When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-# 3️⃣ Environment Variables
+# Environment Variables
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
-🚫These are just examples, replace them with the specifics for your app
-
-    *  REACT_APP_apiKey - this is your Google API key, which can be generated in the Google Cloud Console
-    *  REACT_APP_authDomain - when you set up your Firebase project, this information will be in the dashboard
-    *  REACT_APP_databaseURL - in the Firebase dashboard
-    *  REACT_APP_projectID - in the Firebase dashboard
-    *  REACT_APP_storageBucket - in the Firebase dashboard
-    *  REACT_APP_messagingSenderId - in the Firebase dashboard
-    *  REACT_APP_stripe_API - this is your public Stripe API key, generated in the Stripe dashboard
-    *  REACT_APP_backendURL - optional for your local development server
-    *  REACT_APP_clientid - this is the Stripe_connect clientID, generated in Stripe_connect settings
-    *  REACT_APP_stripe_plan - this is the ID for a second Stripe subscription plan, generated under Stripe products
+    *  REACT_APP_ENV - used during Sentry initialization to decide wether to initialize or not
+    *  REACT_APP_VERSION - used during Sentry initialization for prompt
+    *  REACT_APP_NAME - used during Sentry initialization for prompt
+    *  REACT_APP_SENTRY_DSN - used for reporting
+    *  REACT_APP_BACKEND_URL - centralized link location
 
 # 5️⃣ Content Licenses
 
@@ -134,18 +102,30 @@ In order for the app to function correctly, the user must set up their own envir
 
 🚫Document what you used for testing and why
 
-# 4️⃣ Installation Instructions
+# Installation Instructions
 
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+To initialize this project simply run:
+
+```bash
+$ npm i
+```
+
+or
+
+```bash
+$ yarn
+```
 
 ## Other Scripts
 
-🚫replace these examples with your own
-
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+```json
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "cross-env DB_ENV=testing jest",
+    "coverage": "npm run test -- --coverage --watchAll=false"
+    },
+```
 
 # Contributing
 
