@@ -4,12 +4,14 @@ import Async from 'react-async';
 
 import { FullPageSpinner } from '../components';
 
+const verifyToken = async (state) =>
+  await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth/verify`, {
+    headers: { Authorization: `Bearer ${state.token}` },
+  });
+
 const getUser = async (state, setState) => {
   if (state && state.token) {
-    await axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/auth/verify`, {
-        headers: { Authorization: `Bearer ${state.token}` },
-      })
+    verifyToken(state)
       .then((res) => {
         setState({
           ...state,
@@ -44,10 +46,7 @@ export function AppStateProvider({ children, ...rest }) {
   /* eslint-enable */
 
   const logout = async () => {
-    await axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/auth/logout`, {
-        headers: { Authorization: `Bearer ${state.token}` },
-      })
+    verifyToken(state)
       .then(() => {
         setState({
           ...state,
