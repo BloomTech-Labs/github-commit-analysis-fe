@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default () => (
-  <main>
-    <h1>This is the Home Page!</h1>
-    <p>At some point this will be a pretty marketing page for GitStats!</p>
-  </main>
+  <section>
+    <h1>This is the GitStats Landing Page!</h1>
+    <p>For RC2, this will become a pretty marketing page!</p>
+  </section>
 );

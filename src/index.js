@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as Sentry from '@sentry/browser';
 
+import AppProviders from './context';
 import App from './App';
 
 import './index.css';
@@ -17,4 +18,9 @@ if (process.env.REACT_APP_ENV !== 'production') {
   });
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <AppProviders>
+    <App />
+  </AppProviders>,
+  document.getElementById('root'),
+);

@@ -1,24 +1,44 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
-import Navbar from './components/Layout/Navbar';
-import Layout from './components/Layout';
-import Home from './pages/home';
-import Dashboard from './pages/dashboard';
+import { useAppState } from './context/app-state-context';
+import { Layout } from './components';
+import { FullPageSpinner } from './components';
+
+const Home = React.lazy(() => import('./pages/home'));
+const Dashboard = React.lazy(() => import('./pages/dashboard'));
 
 function App() {
+  const { state, setState } = useAppState();
+
   return (
-    <div className='App'>
-      <Router>
-        <Navbar />
-        <Layout>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/dashboard' component={Dashboard} />
-          </Switch>
-        </Layout>
-      </Router>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <Suspense fallback={<FullPageSpinner />}>
+            <Layout>{state.user ? <Dashboard /> : <Home />}</Layout>
+          </Suspense>
+        </Route>
+        <Route
+          exact
+          path='/callback'
+          render={() => {
+            const hash = new URL(document.location).hash;
+            if (hash && hash.valueOf('jwt')) {
+              const jwt = hash.valueOf('jwt').substring(5);
+              localStorage.setItem('token', jwt);
+              setState({ ...state, token: jwt });
+            }
+            return <Redirect to='/' />;
+          }}
+        />
+      </Switch>
+    </Router>
   );
 }
 
