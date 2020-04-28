@@ -1,7 +1,10 @@
 import React from 'react';
+import { Text, Box } from '@primer/components';
 
 export default () => (
-  <section>
-    <p>Please log in with your GitHub account to access the dashboard.</p>
-  </section>
+  <Box marginTop='1rem'>
+    <Text fontSize='1.5rem' fontFamily='Helvetica'>
+      Please log in with your GitHub account to access the dashboard.
+    </Text>
+  </Box>
 );

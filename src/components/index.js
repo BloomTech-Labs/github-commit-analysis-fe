@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoGitCommit } from 'react-icons/go';
+import { Box, ButtonOutline, Flex, Heading } from '@primer/components';
 
 import { useAppState } from '../context/app-state-context.js';
 
@@ -12,36 +13,46 @@ const FullPageSpinner = () => (
 
 const LoginButton = () => (
   <a role='button' href={`${process.env.REACT_APP_BACKEND_URL}/auth/github`}>
-    <button>Login with GitHub</button>
+    <ButtonOutline>Login with GitHub</ButtonOutline>
   </a>
 );
 const LogoutButton = () => {
   const { state, setState, logout } = useAppState();
-  return <button onClick={() => logout(state, setState)}>Logout</button>;
+  return (
+    <ButtonOutline onClick={() => logout(state, setState)}>
+      Logout
+    </ButtonOutline>
+  );
 };
 
 const Header = () => {
   const { state } = useAppState();
   return (
-    <header>
-      <h1>GitStats</h1>
-      {state.user ? <LogoutButton /> : <LoginButton />}
-    </header>
+    <Box bg='#eeeeee' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
+      <Flex
+        marginX='auto'
+        maxWidth='800px'
+        paddingX='2rem'
+        flexWrap='nowrap'
+        alignItems='center'
+        justifyContent='space-between'
+      >
+        <Heading fontFamily='Helvetica' fontSize='2.5em' color='#333333'>
+          GitStats
+        </Heading>
+        {state.user ? <LogoutButton /> : <LoginButton />}
+      </Flex>
+    </Box>
   );
 };
 
-const Footer = () => (
-  <footer>
-    <h6>&lt; site footer goes here &gt;</h6>
-  </footer>
-);
-
 const Layout = ({ children }) => (
-  <React.Fragment>
+  <Box height='100vh' bg='#fefefe'>
     <Header />
-    <main>{children}</main>
-    <Footer />
-  </React.Fragment>
+    <Box marginX='auto' maxWidth='800px' paddingX='2rem'>
+      {children}
+    </Box>
+  </Box>
 );
 
 export { Spinner, FullPageSpinner, Layout };

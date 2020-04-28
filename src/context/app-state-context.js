@@ -18,6 +18,16 @@ const fetchUserData = async (state) => ({
   repoData: await getData(state.token, `/repo`),
 });
 
+const repositoryListItemClickHandler = (state, setState, repository) => {
+  if (state.activeItem && state.activeItem.id === repository.id)
+    setState({ ...state, activeItem: null });
+  else
+    setState({
+      ...state,
+      activeItem: repository,
+    });
+};
+
 const logout = async (state, setState) => {
   await getData(state.token, `/auth/logout`)
     .then(() => {
@@ -32,6 +42,7 @@ const logout = async (state, setState) => {
 const initialState = {
   user: null,
   repositories: null,
+  activeItem: null,
   token: null,
 };
 
@@ -80,7 +91,10 @@ export const AppStateProvider = ({ children, ...rest }) => {
       return <FullPageSpinner />;
     else
       return (
-        <AppStateContext.Provider value={{ state, setState, logout }} {...rest}>
+        <AppStateContext.Provider
+          value={{ state, setState, repositoryListItemClickHandler, logout }}
+          {...rest}
+        >
           {children}
         </AppStateContext.Provider>
       );
