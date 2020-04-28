@@ -1,87 +1,99 @@
 import React from 'react';
 import axios from 'axios';
-import Async from 'react-async';
 
 import { FullPageSpinner } from '../components';
 
-const verifyToken = async (state) =>
-  await axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth/verify`, {
-    headers: { Authorization: `Bearer ${state.token}` },
-  });
+const getData = async (token, path) => {
+  let { data } = await axios.get(
+    `${process.env.REACT_APP_BACKEND_URL}${path}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    },
+  );
+  return data;
+};
 
-const getUser = async (state, setState) => {
-  if (state && state.token) {
-    verifyToken(state)
-      .then((res) => {
-        setState({
-          ...state,
-          user: res.data.user,
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-        setState({
-          ...state,
-          user: null,
-          token: null,
-        });
-        localStorage.removeItem('token');
-      });
-  }
+const fetchUserData = async (state) => ({
+  userData: await getData(state.token, `/auth/verify`),
+  repoData: await getData(state.token, `/repo`),
+});
+
+const logout = async (state, setState) => {
+  await getData(state.token, `/auth/logout`)
+    .then(() => {
+      setState(initialState);
+      localStorage.setItem('state', JSON.stringify(initialState));
+    })
+    .catch((err) => {
+      console.error(`Logout unsuccessful. Please try again.`, err);
+    });
+};
+
+const initialState = {
+  user: null,
+  repositories: null,
+  token: null,
 };
 
 const AppStateContext = React.createContext();
 
-export function AppStateProvider({ children, ...rest }) {
-  const [state, setState] = React.useState({
-    user: null,
-    repositories: null,
-    token: localStorage.getItem('token'),
-  });
+export const AppStateProvider = ({ children, ...rest }) => {
+  const hash = new URL(document.location).hash;
+  if (!localStorage.getItem('state'))
+    localStorage.setItem(`state`, JSON.stringify(initialState));
+  if (hash.valueOf('jwt'))
+    localStorage.setItem(
+      `state`,
+      JSON.stringify({
+        ...initialState,
+        token: hash.valueOf('jwt').substring(5),
+      }),
+    );
 
-  /* eslint-disable */
-  React.useEffect(() => {
-    getUser(state, setState);
-  }, [state.token]);
-  /* eslint-enable */
+  const [state, setState] = React.useState(
+    JSON.parse(localStorage.getItem('state')),
+  );
+  const [error, setError] = React.useState(undefined);
 
-  const logout = async () => {
-    verifyToken(state)
-      .then(() => {
-        setState({
-          ...state,
-          user: null,
-          token: null,
-        });
-        localStorage.removeItem('token');
+  if (state.token && !(state.user || state.repositories || error)) {
+    fetchUserData(state)
+      .then((data) => {
+        let { userData, repoData } = data;
+        return {
+          user: userData.user,
+          repositories: repoData.repositories,
+        };
       })
-      .catch((err) => {
-        console.error(err);
-      });
-  }; // clear the LocalStorage token and the user data
+      .then(({ user, repositories }) => {
+        setState({ ...state, user, repositories });
+      })
+      .catch(setError)
+      .then(setState(initialState));
+  }
 
-  return (
-    <Async promiseFn={getUser} state={state} setState={setState}>
-      <Async.Pending>
-        <FullPageSpinner />
-      </Async.Pending>
-      <Async.Rejected>
-        {(error) => (
-          <div>
-            <h1>Something has gone catastrophically wrong...</h1>
-            <p>Smash that F5!!!</p>
-            <pre>{error.message}</pre>
-          </div>
-        )}
-      </Async.Rejected>
-      <Async.Fulfilled>
+  React.useEffect(() => {
+    localStorage.setItem(`state`, JSON.stringify(state));
+  }, [state]);
+
+  if (state) {
+    if (state.token && !(state.user || state.repositories))
+      return <FullPageSpinner />;
+    else
+      return (
         <AppStateContext.Provider value={{ state, setState, logout }} {...rest}>
           {children}
         </AppStateContext.Provider>
-      </Async.Fulfilled>
-    </Async>
-  );
-}
+      );
+  } else if (error) {
+    return (
+      <div>
+        <h1>Something has gone catastrophically wrong!</h1>
+        <p>Please smash that F5!!!</p>
+        <pre>{error.message}</pre>
+      </div>
+    );
+  } else return <FullPageSpinner />;
+};
 
 export const useAppState = () => {
   const context = React.useContext(AppStateContext);

@@ -13,8 +13,8 @@ import { FullPageSpinner } from './components';
 const Home = React.lazy(() => import('./pages/home'));
 const Dashboard = React.lazy(() => import('./pages/dashboard'));
 
-function App() {
-  const { state, setState } = useAppState();
+export const App = () => {
+  const { state } = useAppState();
 
   return (
     <Router>
@@ -24,22 +24,10 @@ function App() {
             <Layout>{state.user ? <Dashboard /> : <Home />}</Layout>
           </Suspense>
         </Route>
-        <Route
-          exact
-          path='/callback'
-          render={() => {
-            const hash = new URL(document.location).hash;
-            if (hash && hash.valueOf('jwt')) {
-              const jwt = hash.valueOf('jwt').substring(5);
-              localStorage.setItem('token', jwt);
-              setState({ ...state, token: jwt });
-            }
-            return <Redirect to='/' />;
-          }}
-        />
+        <Route exact path='/callback' render={() => <Redirect to='/' />} />
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

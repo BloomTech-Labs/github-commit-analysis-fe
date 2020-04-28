@@ -16,38 +16,32 @@ const LoginButton = () => (
   </a>
 );
 const LogoutButton = () => {
-  const { logout } = useAppState();
-  return <button onClick={logout}>Logout</button>;
+  const { state, setState, logout } = useAppState();
+  return <button onClick={() => logout(state, setState)}>Logout</button>;
 };
 
-const Header = ({ user }) => (
-  <header>
-    <h1>GitStats</h1>
-    {user ? <LogoutButton /> : <LoginButton />}
-  </header>
-);
+const Header = () => {
+  const { state } = useAppState();
+  return (
+    <header>
+      <h1>GitStats</h1>
+      {state.user ? <LogoutButton /> : <LoginButton />}
+    </header>
+  );
+};
 
 const Footer = () => (
   <footer>
-    <h1> </h1>
+    <h6>&lt; site footer goes here &gt;</h6>
   </footer>
 );
 
-const Layout = ({ children }) => {
-  const {
-    state: { user },
-  } = useAppState();
-
-  return (
-    <React.Fragment>
-      <Header user={user} />
-      <main>
-        <h1>{user ? `Hello ${user.name.split(' ')[0]}!` : `Welcome!`}</h1>
-        {children}
-      </main>
-      <Footer />
-    </React.Fragment>
-  );
-};
+const Layout = ({ children }) => (
+  <React.Fragment>
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </React.Fragment>
+);
 
 export { Spinner, FullPageSpinner, Layout };

@@ -1,11 +1,24 @@
 import React from 'react';
 
-export default () => (
-  <section>
-    <h1>This is the GitStats Dashboard!</h1>
-    <p>
-      For RC2, you'll be able to select and view you repositories here along
-      with some useful stats!
-    </p>
-  </section>
-);
+import { useAppState } from '../context/app-state-context';
+
+export default () => {
+  const {
+    state: {
+      user: { avatarUrl, bio, githubUrl, location, login, name },
+    },
+  } = useAppState();
+
+  return (
+    <section>
+      <img src={avatarUrl} alt='github avatar' />
+      <h1>
+        <a href={githubUrl}>{login}</a>
+      </h1>
+      <h2>
+        {name} @ {location}
+      </h2>
+      <p>{bio}</p>
+    </section>
+  );
+};
