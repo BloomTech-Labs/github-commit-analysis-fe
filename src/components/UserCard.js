@@ -11,7 +11,7 @@ import {
 
 const UserCard = ({ user }) => (
   <BorderBox marginY='1rem' p='1rem' maxWidth='600px' marginX='auto'>
-    <Grid gridTemplateColumns='1fr 2fr' gridGap='1rem'>
+    <Grid gridTemplateColumns={['1fr', '1fr 2fr']} gridGap='1rem'>
       <Avatar
         src={user.avatarUrl}
         alt='github avatar'

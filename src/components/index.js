@@ -32,7 +32,8 @@ const Header = () => {
       <Flex
         marginX='auto'
         maxWidth='800px'
-        paddingX='2rem'
+        padding='1rem'
+        flexDirection={['column', 'row']}
         flexWrap='nowrap'
         alignItems='center'
         justifyContent='space-between'
