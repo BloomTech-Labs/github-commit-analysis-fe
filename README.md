@@ -1,6 +1,6 @@
 # GitStats
 
-You can find the deployed project at [https://gitstats.dev](https://gitstats.dev).
+You can find the deployed project [HERE](https://commit-analysis.herokuapp.com/).
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![Deploy Vendor](https://img.shields.io/badge/deployed_through-Heroku-7056bf.svg)
@@ -44,8 +44,6 @@ Our Mission is to make open source a _better experience_ for developers and main
   > Our web team is most comfortable with this framework and it's available toolset. We feel React is well suited to the type of webapp we want to build and we can move from an SPA to a PWA with relative ease to potentially allow some offline use.
 - _Low-Frequency State Management:_ [`React's ContextAPI`](https://reactjs.org/docs/context.html)
   > Built-in to React and quite useful for passing state between multiple components but not suited to high-frequency updates.
-- _Data Visualization:_ [`ReactD3`](https://react-d3-library.github.io/)
-  > Robust library well suited to our purposes. Although there may be a small learning curve for what we aim to provide, we believe the time spent therein will be fruitful.
 - _Styling Library:_ [`Primer Components`](https://primer.style/components/)
   > Easy to use styling library provided by GitHub that allows us to make sure our product feels familiar to our users.
 
@@ -55,8 +53,8 @@ Our Mission is to make open source a _better experience_ for developers and main
 
 - _Database:_ [`PostgreSQL`](https://www.postgresql.org/)
   > The standard to follow per the Labs Engineering Standards.
-- _API Framework:_ [`GraphQL`](https://graphql.org/)
-  > Although this will carry a slight learning curve for our team we believe that our product is best suited to this style. Beyond that, we also plan on using GitHubs v4 GraphQL API so we aim to have style consistency through our project.
+- _API Framework:_ REST
+  > Although we are retrieving information from GitHub's v4 GraphQL API, internal endpoints were built as a RESTful API to keep within scope.
 - _RunTime:_ [`NodeJS`](https://nodejs.org/)
   > We feel that product quality will be improved through the sharing of common knowledge and reusable components.
 - _Web Application Framework:_ [`Express`](https://expressjs.com/)
@@ -89,15 +87,6 @@ In order for the app to function correctly, the user must set up their own envir
     *  REACT_APP_SENTRY_DSN - used for reporting
     *  REACT_APP_BACKEND_URL - centralized link location
 
-# 5️⃣ Content Licenses
-
-🚫For all content - images, icons, etc, use this table to document permission of use. Remove the two placeholders and add you content to this table
-
-| Image Filename | Source / Creator | License                                                                      |
-| -------------- | ---------------- | ---------------------------------------------------------------------------- |
-| doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
-| rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
-
 # 4️⃣ Testing
 
 🚫Document what you used for testing and why
@@ -120,10 +109,11 @@ $ yarn
 
 ```json
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "test": "cross-env DB_ENV=testing jest",
-    "coverage": "npm run test -- --coverage --watchAll=false"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "coverage": "npm run test -- --coverage --watchAll=false",
+    "eject": "react-scripts eject"
     },
 ```
 
