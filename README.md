@@ -1,6 +1,6 @@
 # GitStats
 
-You can find the deployed project [HERE](https://commit-analysis.herokuapp.com/)!
+You can find the deployed project [HERE](https://commit-analysis.herokuapp.com/)
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![Deploy Vendor](https://img.shields.io/badge/deployed_through-Heroku-7056bf.svg)
