@@ -1,9 +1,10 @@
 # GitStats
 
-You can find the deployed project [HERE](https://commit-analysis.herokuapp.com/).
+You can find the deployed project [HERE](https://commit-analysis.herokuapp.com/)!
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![Deploy Vendor](https://img.shields.io/badge/deployed_through-Heroku-7056bf.svg)
+![CI](https://github.com/Lambda-School-Labs/github-commit-analysis-fe/workflows/CI/badge.svg)
 <br />
 [![Maintainability](https://api.codeclimate.com/v1/badges/f3628f408097598f5a83/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/github-commit-analysis-fe/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f3628f408097598f5a83/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/github-commit-analysis-fe/test_coverage)
