@@ -30,7 +30,7 @@ const LogoutButton = () => {
 const Header = () => {
   const { state } = useAppState();
   return (
-    <Box bg='#0A9AEC' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
+    <Box bg='#eeeeee' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
       <Flex
         marginX='auto'
         maxWidth='800px'
