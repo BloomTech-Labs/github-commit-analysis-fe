@@ -4,6 +4,8 @@ import { Box, ButtonOutline, Flex, Heading } from '@primer/components';
 
 import { useAppState } from '../context/app-state-context.js';
 
+import Footer from '../components/Footer';
+
 const Spinner = (props) => <GoGitCommit className='spinner' {...props} />;
 const FullPageSpinner = () => (
   <div className='full_page_spinner'>
@@ -28,7 +30,7 @@ const LogoutButton = () => {
 const Header = () => {
   const { state } = useAppState();
   return (
-    <Box bg='#eeeeee' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
+    <Box bg='#0A9AEC' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
       <Flex
         marginX='auto'
         maxWidth='800px'
@@ -53,6 +55,7 @@ const Layout = ({ children }) => (
     <Box marginX='auto' maxWidth='800px' paddingX='2rem'>
       {children}
     </Box>
+    <Footer />
   </Box>
 );
 
