@@ -4,6 +4,7 @@ import { Box, ButtonOutline, Flex, Heading, Link } from '@primer/components';
 
 import { useAppState } from '../context/app-state-context.js';
 
+import Footer from '../components/Footer';
 
 const Spinner = (props) => <GoGitCommit className='spinner' {...props} />;
 const FullPageSpinner = () => (
@@ -56,6 +57,7 @@ const Layout = ({ children }) => (
     <Box marginX='auto' maxWidth='800px' paddingX='2rem'>
       {children}
     </Box>
+    <Footer />
   </Box>
 );
 
