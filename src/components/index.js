@@ -1,13 +1,13 @@
 import React from 'react';
 import { GoGitCommit } from 'react-icons/go';
-import { Box, ButtonOutline, Flex, Heading, Link } from '@primer/components';
+import { Box, ButtonOutline, Flex, Heading, Link, Fixed } from '@primer/components';
 import { useAppState } from '../context/app-state-context.js';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 const logoImage = require('../images/Gitstats-logo-white-02.png');
 
 const Logo = styled.img`
-position: fixed;
+position: absolute;
 height: 30px;
 `
 
@@ -35,7 +35,14 @@ const LogoutButton = () => {
 const Header = () => {
   const { state } = useAppState();
   return (
-    <Box bg='#0A9AEC' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
+    <Box as={Fixed} 
+      width="100%" 
+      top={0} 
+      bg='#0A9AEC' 
+      borderBottom='1' 
+      borderRadius='0' 
+      borderColor='#cccccc'
+    >
       <Flex
         padding='1rem'
         flexDirection={['column', 'row']}
@@ -57,7 +64,7 @@ const Header = () => {
 };
 
 const Layout = ({ children }) => (
-  <Box height='100vh' bg='#fefefe'>
+  <Box bg='#fefefe'>
     <Header />
     <Box marginX='auto' maxWidth='800px' paddingX='2rem'>
       {children}
