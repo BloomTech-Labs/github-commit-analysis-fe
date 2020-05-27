@@ -1,8 +1,9 @@
 import React from 'react';
 import { GoGitCommit } from 'react-icons/go';
-import { Box, ButtonOutline, Flex, Heading } from '@primer/components';
-
+import { Box, ButtonOutline, Flex, Heading, Link, Fixed } from '@primer/components';
 import { useAppState } from '../context/app-state-context.js';
+import Footer from '../components/Footer';
+const logoImage = require('../images/Gitstats-logo-white-02.png');
 
 const Spinner = (props) => <GoGitCommit className='spinner' {...props} />;
 const FullPageSpinner = () => (
@@ -28,20 +29,22 @@ const LogoutButton = () => {
 const Header = () => {
   const { state } = useAppState();
   return (
-    <Box bg='#eeeeee' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
+    <Box height='65px' bg='#0A9AEC' borderBottom='1' borderRadius='0' borderColor='#cccccc'>
       <Flex
-        marginX='auto'
-        maxWidth='800px'
         padding='1rem'
         flexDirection={['column', 'row']}
         flexWrap='nowrap'
         alignItems='center'
         justifyContent='space-between'
       >
-        <Heading fontFamily='Helvetica' fontSize='2.5em' color='#333333'>
-          GitStats
+        <Heading fontFamily='Helvetica' fontSize='2.5em' color='white'>
+          <img as={Fixed} height='30px' src={logoImage} alt={'Gitstats white logo'} />
         </Heading>
-        {state.user ? <LogoutButton /> : <LoginButton />}
+        <Heading fontFamily='Helvetica' fontSize='1.0em' color='white'>
+          <Link href='/' fontFamily='Helvetica' fontSize='1.0em' color='white' marginRight='15px'>Home</Link>
+          <Link href='/about' fontFamily='Helvetica' fontSize='1.0em' color='white' marginRight='15px'>About</Link>
+          {state.user ? <LogoutButton /> : <LoginButton />}
+        </Heading>
       </Flex>
     </Box>
   );
@@ -53,6 +56,7 @@ const Layout = ({ children }) => (
     <Box marginX='auto' maxWidth='800px' paddingX='2rem'>
       {children}
     </Box>
+    <Footer />
   </Box>
 );
 
