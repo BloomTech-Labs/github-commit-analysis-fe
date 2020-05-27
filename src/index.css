@@ -25,3 +25,15 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.cat {
+  margin: auto;
+  padding: 7px;
+  border: 1px solid black;
+}
+
+.LI {
+    margin: auto;
+    padding: 7px;
+    border: 1px solid black;
+}

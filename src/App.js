@@ -11,6 +11,8 @@ import { Layout } from './components';
 import { FullPageSpinner } from './components';
 
 const Home = React.lazy(() => import('./pages/home'));
+const About = React.lazy(() => import('./pages/About'));
+
 const Dashboard = React.lazy(() => import('./pages/dashboard'));
 
 export const App = () => {
@@ -24,10 +26,14 @@ export const App = () => {
             <Layout>{state.user ? <Dashboard /> : <Home />}</Layout>
           </Suspense>
         </Route>
+        <Route exact path='/about'>
+          <Suspense fallback={<FullPageSpinner />}>
+            <Layout>{state.user ? <Dashboard /> : <About />}</Layout>
+          </Suspense>
+        </Route>
         <Route exact path='/callback' render={() => <Redirect to='/' />} />
       </Switch>
     </Router>
   );
 };
-
 export default App;
