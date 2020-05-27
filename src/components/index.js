@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const logoImage = require('../images/Gitstats-logo-white-02.png');
 
 const Logo = styled.img`
-position: absolute;
+position: fixed;
 height: 30px;
 `
 
