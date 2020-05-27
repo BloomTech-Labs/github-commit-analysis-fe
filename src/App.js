@@ -36,8 +36,4 @@ export const App = () => {
     </Router>
   );
 };
-
-{/* <Layout>{state.user ? <Dashboard /> : <About />}</Layout> */}
-
-
 export default App;
