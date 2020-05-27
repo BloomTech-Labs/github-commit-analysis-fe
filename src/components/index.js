@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoGitCommit } from 'react-icons/go';
-import { Box, ButtonOutline, Flex, Heading, Link, Fixed } from '@primer/components';
+import { Box, ButtonOutline, Flex, Heading, Link } from '@primer/components';
 import { useAppState } from '../context/app-state-context.js';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
