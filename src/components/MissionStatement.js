@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Heading } from "@primer/components";
 const MissionStatement = () => {
   return (
-    <Box marginTop="2rem">
+    <Box marginTop="6.5rem">
       <Box
         height="300px"
       >
