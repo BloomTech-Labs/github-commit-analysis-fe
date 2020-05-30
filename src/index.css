@@ -37,3 +37,13 @@ body {
     padding: 7px;
     border: 1px solid black;
 }
+
+.UsersButton {
+  /* margin-top: -10px; */
+  height:30px;
+}
+
+.RepoButton {
+  /* margin-top: -10px; */
+  height:30px
+}
