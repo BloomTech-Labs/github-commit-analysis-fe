@@ -10,6 +10,8 @@ import { useAppState } from './context/app-state-context';
 import { Layout } from './components';
 import { FullPageSpinner } from './components';
 
+import UserRepos from './components/UserRepos';
+
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/About'));
 
@@ -29,6 +31,11 @@ export const App = () => {
         <Route exact path='/about'>
           <Suspense fallback={<FullPageSpinner />}>
             <Layout>{state.user ? <Dashboard /> : <About />}</Layout>
+          </Suspense>
+        </Route>
+        <Route exact path='/repos'>
+          <Suspense fallback={<FullPageSpinner />}>
+            <UserRepos />
           </Suspense>
         </Route>
         <Route exact path='/callback' render={() => <Redirect to='/' />} />
