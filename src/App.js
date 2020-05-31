@@ -11,6 +11,7 @@ import { Layout } from './components';
 import { FullPageSpinner } from './components';
 
 import UserRepos from './components/UserRepos';
+import UserRepos1 from './components/UserRepos1';
 
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -36,6 +37,7 @@ export const App = () => {
         <Route exact path='/repos'>
           <Suspense fallback={<FullPageSpinner />}>
             <UserRepos />
+            <UserRepos1 />
           </Suspense>
         </Route>
         <Route exact path='/callback' render={() => <Redirect to='/' />} />
