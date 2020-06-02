@@ -1,17 +1,26 @@
 import React from "react";
+import styled from "styled-components";
 import { Box, Text, Heading } from "@primer/components";
+
+const BoxesAround = styled.div`
+border: 2px solid #DCDCDC;
+margin: 10px;
+`
+
 const MissionStatement = () => {
   return (
-    <Box marginTop="6.5rem">
+    <Box>
       <Box
         height="300px"
       >
+        <BoxesAround>
         <Heading
           fontSize='2rem'
           fontFamily='Helvetica'
-          margin='1.5rem 0 1.5rem 3rem'
+          margin=' 1.5rem 0 1.5rem 3rem'
           textAlign="left"
         >
+        
           Mission
         </Heading>
         <Text
@@ -26,6 +35,7 @@ const MissionStatement = () => {
           <br/>
           Our mission is to make open source a better experience for developers and maintainers by committing to actionable insights for project success.
         </Text>
+        </BoxesAround>
       </Box>
     </Box>
   );

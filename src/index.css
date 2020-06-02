@@ -39,11 +39,25 @@ body {
 }
 
 .UsersButton {
-  /* margin-top: -10px; */
   height:30px;
 }
 
 .RepoButton {
-  /* margin-top: -10px; */
   height:30px
+}
+
+
+
+  .popup .block:hover{
+    z-index: 10;
+    position: absolute;
+    height: 600px; 
+    width:600px;
+    top:auto;
+    left: auto;
+    transform: ease-out translate(20%), scale(1.1); 
+  }
+
+.popup{
+  display:none
 }

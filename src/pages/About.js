@@ -12,10 +12,21 @@ const CardHolder = styled.div`
   justify-content: space-evenly;
   margin-bottom: 5rem;
 `
+
+const About = styled.div`
+padding: 2px 0px 10px 0px;
+background-color: #EEEEEE;
+border-radius: 6px;
+box-shadow: 0px 5px 5px 15px #A9A9A9;
+width: 59rem;
+margin-bottom: 100px;
+margin-top: 100px;
+
+`
 export default () => (
-  <div>
+  <About>
     <MissionStatement/>
-    <CardHolder>
+    <CardHolder className='containx'>
       {data.map(member => {
         return (
           <TeamCard
@@ -24,10 +35,10 @@ export default () => (
             bio={member.bio}
             github={member.github}
             linkedIn={member.linkedIn}
-            key={member.id}
+            id={member.id}
           />
         )
       })}
     </CardHolder>
-  </div>
+  </About>
 );
