@@ -7,6 +7,7 @@ body {
 .spinner {
   animation: spinning 1s linear infinite;
 }
+
 .full_page_spinner {
   font-size: 5rem;
   height: 100vh;
@@ -36,4 +37,22 @@ body {
     margin: auto;
     padding: 7px;
     border: 1px solid black;
+}
+
+.UsersButton {
+  height:30px;
+}
+
+.RepoButton {
+  height:30px
+}
+
+.popup:hover{
+    z-index: 10;
+    position: absolute;
+    height: 600px; 
+    width:600px;
+    top:auto;
+    left: auto;
+    transform: ease-out translate(20%), scale(1.1); 
 }

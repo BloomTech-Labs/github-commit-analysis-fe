@@ -9,7 +9,7 @@ import {
 import { useAppState } from './context/app-state-context';
 import { Layout } from './components';
 import { FullPageSpinner } from './components';
-
+import MyDashboard from "./pages/NewDashboard"
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/About'));
 
@@ -21,6 +21,9 @@ export const App = () => {
   return (
     <Router>
       <Switch>
+      <Route exact path='/dashboard'>
+            <Layout><MyDashboard /></Layout>
+        </Route>
         <Route exact path='/'>
           <Suspense fallback={<FullPageSpinner />}>
             <Layout>{state.user ? <Dashboard /> : <Home />}</Layout>
