@@ -26,7 +26,7 @@ margin-top: 100px;
 export default () => (
   <About>
     <MissionStatement/>
-    <CardHolder className='containx'>
+    <CardHolder className='container'>
       {data.map(member => {
         return (
           <TeamCard
