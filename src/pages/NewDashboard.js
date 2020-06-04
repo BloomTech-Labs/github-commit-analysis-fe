@@ -6,23 +6,25 @@ import ImageHolder from "../img/DashboardPlaceholder.jpg";
 
 const Holder = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin:  auto;
+  justify-content: center;
 `;
 
 const SideOne = styled.div`
   flex-direction: column;
-  margin: 10px 0px 30px 20px;
+  margin: 10px 0px 30px 0px;
+  border-right: 1px solid #DCDCDC;
+  // padding-right: 5px;
+
 `;
 
 const SideTwo = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
+
 `;
 
 const RepoCard = styled.div`
-  border: 1px solid black;
+  border-bottom: 1px solid #DCDCDC;
   margin: 10px 0px 10px 0px;
   padding: 1%;
   height: auto;
@@ -37,53 +39,67 @@ margin: 80px 0px 10px 30px;
 const SearchRepos = styled.div`
 display: flex;
 flex-direction: row;
-margin: 20px 0px 10px 0px;
+margin: 20px 1px 10px 0px;
 `;
+
+
 
 const SearchUsers = styled.div`
 display: flex;
 justify-content: flex-end;
-margin: 80px 0px 0px 0px;
+margin: 80px 40px 0px 0px;
 `;
 
 const ToggleHolder = styled.div`
 display: flex;
 flex-direction: row;
-margin: 10px 65px 10px 0px
+margin: 60px 65px 10px 0px;
 `
 
 const Toggle = styled.div`
+display: flex;
+justify-content: center;
 flex-direction: row;
 Font-weight: bold;
-color: black;
+color: #0a9aec;
 width: 150px;
 background-color: gray;
-margin: 10px 60px 10px 100px
+margin: 10px 60px 10px 100px;
+padding: 10px;
+border-radius: 10px;
+background-color: white;
+border: 2px solid #0a9aec;
+&:hover {
+  background-color: #0a9aec;
+  color: white;
+}
 `
+
 const BoardHolder = styled.div`
-margin: 10px 0px 300px 0px;
+margin: 50px 40px 100px 30px;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
+border: 2px solid gray;
+max-width: 99%;
 `
-
 const BoardOne = styled.div`
 border: 1px solid gray;
 flex-direction: row;
-width: 330px;
+width: 450px;
 height: 500px;
-margin: 10px 30px 30px 30px;
 padding: 5px;
 `
 
 const BoardTwo = styled.div`
 flex-direction: row;
 border: 1px solid gray;
-width: 330px;
-margin: 10px 0px 30px 30px;
+width: 450px;
 height: 500px;
 padding: 5px;
+
 `
+
 
 const MyDashboard = () => {
  // make sure to import axios or install if needed
@@ -95,6 +111,7 @@ const MyDashboard = () => {
     //   console.log(error)
     // })
     // })
+  
 
   return (
    
@@ -103,32 +120,33 @@ const MyDashboard = () => {
         <ProfilePic src={ImageHolder} alt="profile pic"></ProfilePic>
         <SearchRepos>
           <input
+            id="input"
             type="text"
             name="search"
             placeholder="Search Repos"
-          ></input>
-          <button className="RepoButton">
+          />
+          <button id="buttons">
             <i className="fa fa-search fa-lg" aria-hidden="true"></i>
           </button>
         </SearchRepos>
         <div>
-          <RepoCard>
+          <RepoCard className="repoCard">
             <p>repo 1</p>
             <p># of commits</p>
           </RepoCard>
-          <RepoCard>
+          <RepoCard className="repoCard">
             <p>repo 1</p>
             <p># of commits</p>
           </RepoCard>
-          <RepoCard>
+          <RepoCard className="repoCard">
             <p>repo 1</p>
             <p># of commits</p>
           </RepoCard>
-          <RepoCard>
+          <RepoCard className="repoCard">
             <p>repo 1</p>
             <p># of commits</p>
           </RepoCard>
-          <RepoCard>
+          <RepoCard className="repoCard">
             <p>repo 1</p>
             <p># of commits</p>
           </RepoCard>
@@ -137,14 +155,15 @@ const MyDashboard = () => {
       <SideTwo>
         <SearchUsers>
           <input
-            type="text"
+            type="type"
             name="search"
-            placeholder="Search Users">
-            </input>
+            placeholder="Search Users"
+           />
             <button className="UsersButton">
               <i class="fa fa-search fa-lg" aria-hidden="true"></i>
             </button>
         </SearchUsers>
+
         <ToggleHolder>
             <Toggle>Slider 1</Toggle>
             <Toggle>Slider 2</Toggle>
