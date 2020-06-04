@@ -55,7 +55,7 @@ const TeamCard = (props) => {
   return (
     
     <Box>
-      <Boxes>  
+      <Boxes >  
           <Pics src={props.pic} alt="profile pic" />
           <Heading textAlign="center">{props.name}</Heading>
           <Text as="p" textAlign="center">
