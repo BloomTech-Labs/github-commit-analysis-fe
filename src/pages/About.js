@@ -21,24 +21,31 @@ box-shadow: 0px 5px 5px 15px #A9A9A9;
 width: 59rem;
 margin-bottom: 100px;
 margin-top: 100px;
-
 `
+
+const Aligner =styled.div`
+display: flex;
+justify-content: center;
+`
+
 export default () => (
-  <About>
-    <MissionStatement/>
-    <CardHolder className='container'>
-      {data.map(member => {
-        return (
-          <TeamCard
-            pic={member.pic}
-            name={member.name}
-            bio={member.bio}
-            github={member.github}
-            linkedIn={member.linkedIn}
-            id={member.id}
-          />
-        )
-      })}
-    </CardHolder>
-  </About>
+  <Aligner>  
+    <About>
+      <MissionStatement/>
+      <CardHolder className='container'>
+        {data.map(member => {
+          return (
+            <TeamCard
+              pic={member.pic}
+              name={member.name}
+              bio={member.bio}
+              github={member.github}
+              linkedIn={member.linkedIn}
+              id={member.id}
+            />
+          )
+        })}
+      </CardHolder>
+    </About>
+  </Aligner>
 );

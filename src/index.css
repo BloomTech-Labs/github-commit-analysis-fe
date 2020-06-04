@@ -49,10 +49,14 @@ body {
 
 .popup:hover{
     z-index: 10;
-    position: absolute;
     height: 600px; 
     width:600px;
     top:auto;
     left: auto;
     transform: ease-out translate(20%), scale(1.1); 
+}
+
+.bg-blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
