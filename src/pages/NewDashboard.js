@@ -86,18 +86,8 @@ padding: 5px;
 `
 
 const MyDashboard = () => {
- // make sure to import axios or install if needed
-    // axios.get("/something", (req, res, next) {
-    //   .then(res => {
-    //     console.log(res)
-    //   })
-    // .catch(error => {
-    //   console.log(error)
-    // })
-    // })
 
   return (
-   
     <Holder>
       <SideOne>
         <ProfilePic src={ImageHolder} alt="profile pic"></ProfilePic>
@@ -106,7 +96,7 @@ const MyDashboard = () => {
             type="text"
             name="search"
             placeholder="Search Repos"
-          ></input>
+          />
           <button className="RepoButton">
             <i className="fa fa-search fa-lg" aria-hidden="true"></i>
           </button>
