@@ -18,6 +18,7 @@ const SideOne = styled.div`
 const SideTwo = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
+
 `;
 
 const RepoCard = styled.div`
@@ -95,6 +96,7 @@ const BoardTwo = styled.div`
 `;
 
 const MyDashboard = () => {
+
   return (
     <Holder>
       <SideOne>
