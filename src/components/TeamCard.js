@@ -51,38 +51,40 @@ const Boxes = styled.div`
 `;
 
 const TeamCard = (props) => {
-  
   return (
-    
     <Box>
-      <Boxes >  
-          <Pics src={props.pic} alt="profile pic" />
-          <Heading textAlign="center">{props.name}</Heading>
-          <Text as="p" textAlign="center">
-            {props.bio}
-          </Text>
-          <Flex justifyContent="center">
-            <Github href={props.github} target="_blank" rel="noopener noreferrer">
+      <Boxes>
+        <Pics src={props.pic} alt="profile pic" />
+        <Heading textAlign="center">{props.name}</Heading>
+        <Text as="p" textAlign="center">
+          {props.bio}
+        </Text>
+        <Flex justifyContent="center">
+          <Github href={props.github} target="_blank" rel="noopener noreferrer">
+            {" "}
+            <i className="fa fa-github cat"></i>{" "}
+          </Github>
+          {props.linkedIn ? (
+            <LinkedIn
+              href={props.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {" "}
-              <i className="fa fa-github cat"></i>{" "}
-            </Github>
-            {props.linkedIn ? (
-              <LinkedIn href={props.linkedIn}>
-                {" "}
-                <i className="fa fa-linkedin LI" aria-hidden="true"></i>{" "}
-              </LinkedIn>
-            ) : (
-              <Gmail href={props.email}>
-                {" "}
-                <i
-                  className="fa fa-envelope-square LI"
-                  aria-hidden="true"
-                ></i>{" "}
-              </Gmail>
-            )}
-          </Flex>
+              <i className="fa fa-linkedin LI" aria-hidden="true"></i>{" "}
+            </LinkedIn>
+          ) : (
+            <Gmail href={props.email}>
+              {" "}
+              <i
+                className="fa fa-envelope-square LI"
+                aria-hidden="true"
+              ></i>{" "}
+            </Gmail>
+          )}
+        </Flex>
       </Boxes>
-    </Box> 
+    </Box>
   );
 };
 export default TeamCard;
