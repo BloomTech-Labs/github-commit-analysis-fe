@@ -1,12 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* body {
+  width: 100%;
+} */
 
 .spinner {
   animation: spinning 1s linear infinite;
 }
+
 .full_page_spinner {
   font-size: 5rem;
   height: 100vh;
@@ -36,4 +35,51 @@ body {
     margin: auto;
     padding: 7px;
     border: 1px solid black;
+}
+
+.UsersButton {
+  height:30px;
+}
+
+.RepoButton {
+  height:30px
+}
+
+.popup:hover{
+    z-index: 10;
+    height: 600px; 
+    width:600px;
+    top:auto;
+    left: auto;
+    transform: ease-out translate(20%), scale(1.1); 
+}
+
+.bg-blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.repoCard{
+  transition: width 2s, height 2s, transform .2s;
+  width: 250px;
+}
+
+.repoCard:hover{
+  box-shadow: 2px 0px 2px 0px #0a9aec;
+  width: 253px;
+  height: 79px;
+  margin-top: -9px;
+}
+
+.searchme {
+  background-color: aqua;
+}
+
+#input {
+  padding: 10px;
+}
+
+#buttons {
+  padding: 5px;
+  height: 41px;
 }
