@@ -24,16 +24,23 @@ const SideTwo = styled.div`
 `;
 
 const RepoCard = styled.div`
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 2px solid #DCDCDC;
   margin: 10px 0px 10px 0px;
   padding: 1%;
   height: auto;
 `;
 
 const ProfilePic = styled.img`
-margin: 80px 0px 10px 30px;
-  width: 120px;
-  height: 100px;
+  margin: 80px 0px 10px 30px;
+  width: 200px;
+  height: auto;
+  transition: transform 2s;
+
+  &:hover {
+    width: 215px;
+    height: auto;
+    
+  }
 `;
 
 const SearchRepos = styled.div`
@@ -63,15 +70,18 @@ flex-direction: row;
 Font-weight: bold;
 color: #0a9aec;
 width: 150px;
-background-color: gray;
 margin: 10px 60px 10px 100px;
 padding: 10px;
 border-radius: 10px;
 background-color: white;
 border: 2px solid #0a9aec;
+transition: transform 2s;
 &:hover {
   background-color: #0a9aec;
   color: white;
+  width: 155px;
+  height: auto;
+  
 }
 `
 
@@ -86,7 +96,7 @@ max-width: 99%;
 const BoardOne = styled.div`
 border: 1px solid gray;
 flex-direction: row;
-width: 450px;
+width: 490px;
 height: 500px;
 padding: 5px;
 `
@@ -94,7 +104,7 @@ padding: 5px;
 const BoardTwo = styled.div`
 flex-direction: row;
 border: 1px solid gray;
-width: 450px;
+width: 490px;
 height: 500px;
 padding: 5px;
 
