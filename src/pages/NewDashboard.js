@@ -13,19 +13,11 @@ const SideOne = styled.div`
   flex-direction: column;
   margin: 10px 0px 30px 0px;
   border-right: 1px solid #dcdcdc;
-  // padding-right: 5px;
 `;
 
 const SideTwo = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
-`;
-
-const RepoCard = styled.div`
-  border-bottom: 2px solid #dcdcdc;
-  margin: 10px 0px 10px 0px;
-  padding: 1%;
-  height: auto;
 `;
 
 const ProfilePic = styled.img`
@@ -37,11 +29,6 @@ const ProfilePic = styled.img`
     width: 215px;
     height: auto;
   }
-`;
-const SearchRepos = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 20px 1px 10px 0px;
 `;
 
 const SearchUsers = styled.div`
