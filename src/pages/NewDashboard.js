@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
 import ImageHolder from "../img/DashboardPlaceholder.jpg";
+import UserRepos from "../components/search";
 
 const Holder = styled.div`
   display: flex;
@@ -12,21 +13,11 @@ const SideOne = styled.div`
   flex-direction: column;
   margin: 10px 0px 30px 0px;
   border-right: 1px solid #dcdcdc;
-  // padding-right: 5px;
 `;
 
 const SideTwo = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
-
-`;
-
-const RepoCard = styled.div`
-  border-bottom: 2px solid #DCDCDC;
-
-  margin: 10px 0px 10px 0px;
-  padding: 1%;
-  height: auto;
 `;
 
 const ProfilePic = styled.img`
@@ -34,19 +25,10 @@ const ProfilePic = styled.img`
   width: 200px;
   height: auto;
   transition: transform 2s;
-
   &:hover {
     width: 215px;
     height: auto;
-    
   }
-
-`;
-
-const SearchRepos = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 20px 1px 10px 0px;
 `;
 
 const SearchUsers = styled.div`
@@ -62,27 +44,25 @@ const ToggleHolder = styled.div`
 `;
 
 const Toggle = styled.div`
-display: flex;
-justify-content: center;
-flex-direction: row;
-Font-weight: bold;
-color: #0a9aec;
-width: 150px;
-margin: 10px 60px 10px 100px;
-padding: 10px;
-border-radius: 10px;
-background-color: white;
-border: 2px solid #0a9aec;
-transition: transform 2s;
-&:hover {
-  background-color: #0a9aec;
-  color: white;
-  width: 155px;
-  height: auto;
-  
-}
-`
-
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-weight: bold;
+  color: #0a9aec;
+  width: 150px;
+  margin: 10px 60px 10px 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid #0a9aec;
+  transition: transform 2s;
+  &:hover {
+    background-color: #0a9aec;
+    color: white;
+    width: 155px;
+    height: auto;
+  }
+`;
 
 const BoardHolder = styled.div`
   margin: 50px 40px 100px 30px;
@@ -93,63 +73,27 @@ const BoardHolder = styled.div`
   max-width: 99%;
 `;
 const BoardOne = styled.div`
-border: 1px solid gray;
-flex-direction: row;
-width: 490px;
-height: 500px;
-padding: 5px;
-`
+  border: 1px solid gray;
+  flex-direction: row;
+  width: 490px;
+  height: 500px;
+  padding: 5px;
+`;
 
 const BoardTwo = styled.div`
-flex-direction: row;
-border: 1px solid gray;
-width: 490px;
-height: 500px;
-padding: 5px;
-
-`
-
-
+  flex-direction: row;
+  border: 1px solid gray;
+  width: 490px;
+  height: 500px;
+  padding: 5px;
+`;
 
 const MyDashboard = () => {
-
   return (
     <Holder>
       <SideOne>
         <ProfilePic src={ImageHolder} alt="profile pic"></ProfilePic>
-        <SearchRepos>
-          <input
-            id="input"
-            type="text"
-            name="search"
-            placeholder="Search Repos"
-          />
-          <button id="buttons">
-            <i className="fa fa-search fa-lg" aria-hidden="true"></i>
-          </button>
-        </SearchRepos>
-        <div>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-        </div>
+        <UserRepos />
       </SideOne>
       <SideTwo>
         <SearchUsers>
@@ -158,7 +102,6 @@ const MyDashboard = () => {
             <i className="fa fa-search fa-lg" aria-hidden="true"></i>
           </button>
         </SearchUsers>
-
         <ToggleHolder>
           <Toggle>Slider 1</Toggle>
           <Toggle>Slider 2</Toggle>

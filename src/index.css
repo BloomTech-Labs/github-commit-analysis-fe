@@ -1,7 +1,3 @@
-/* body {
-  width: 100%;
-} */
-
 .spinner {
   animation: spinning 1s linear infinite;
 }
@@ -64,11 +60,12 @@
   width: 250px;
 }
 
-.repoCard:hover{
+.repocard:hover{
   box-shadow: 2px 0px 2px 0px #0a9aec;
   width: 253px;
-  height: 79px;
+  height: 30px;
   margin-top: -9px;
+  padding: 5%;
 }
 
 .searchme {
@@ -82,4 +79,27 @@
 #buttons {
   padding: 5px;
   height: 41px;
+}
+
+.searchRepos {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.repocard {
+  border-bottom: 2px solid #DCDCDC;
+  margin: 10px 0px 10px 0px;
+  padding: 2%;
+  height: auto;
+  background: white;
+}
+
+.searchRepo {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 1px 10px 0px;
+}
+
+#repo-name {
+  width: 90%;
 }
