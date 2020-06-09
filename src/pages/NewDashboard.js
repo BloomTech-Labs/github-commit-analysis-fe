@@ -3,6 +3,9 @@ import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
 import ImageHolder from "../img/DashboardPlaceholder.jpg";
 
+import UserRepos from "../components/search"
+
+
 const Holder = styled.div`
   display: flex;
   justify-content: center;
@@ -23,7 +26,6 @@ const SideTwo = styled.div`
 
 const RepoCard = styled.div`
   border-bottom: 2px solid #DCDCDC;
-
   margin: 10px 0px 10px 0px;
   padding: 1%;
   height: auto;
@@ -40,9 +42,7 @@ const ProfilePic = styled.img`
     height: auto;
     
   }
-
 `;
-
 const SearchRepos = styled.div`
   display: flex;
   flex-direction: row;
@@ -106,51 +106,16 @@ border: 1px solid gray;
 width: 490px;
 height: 500px;
 padding: 5px;
-
 `
 
-
-
 const MyDashboard = () => {
-
   return (
     <Holder>
       <SideOne>
         <ProfilePic src={ImageHolder} alt="profile pic"></ProfilePic>
-        <SearchRepos>
-          <input
-            id="input"
-            type="text"
-            name="search"
-            placeholder="Search Repos"
-          />
-          <button id="buttons">
-            <i className="fa fa-search fa-lg" aria-hidden="true"></i>
-          </button>
-        </SearchRepos>
-        <div>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-          <RepoCard className="repoCard">
-            <p>repo 1</p>
-            <p># of commits</p>
-          </RepoCard>
-        </div>
+        <UserRepos />
       </SideOne>
+
       <SideTwo>
         <SearchUsers>
           <input type="type" name="search" placeholder="Search Users" />
@@ -158,7 +123,6 @@ const MyDashboard = () => {
             <i className="fa fa-search fa-lg" aria-hidden="true"></i>
           </button>
         </SearchUsers>
-
         <ToggleHolder>
           <Toggle>Slider 1</Toggle>
           <Toggle>Slider 2</Toggle>
@@ -177,3 +141,37 @@ const MyDashboard = () => {
   );
 };
 export default MyDashboard;
+
+  // <SearchRepos>
+  //         <input
+  //           id="input"
+  //           type="text"
+  //           name="search"
+  //           placeholder="Search Repos"
+  //         />
+  //         <button id="buttons">
+  //           <i className="fa fa-search fa-lg" aria-hidden="true"></i>
+  //         </button>
+  //       </SearchRepos>
+  //       <div>
+  //         <RepoCard className="repoCard">
+  //           <p>repo 1</p>
+  //           <p># of commits</p>
+  //         </RepoCard>
+  //         <RepoCard className="repoCard">
+  //           <p>repo 1</p>
+  //           <p># of commits</p>
+  //         </RepoCard>
+  //         <RepoCard className="repoCard">
+  //           <p>repo 1</p>
+  //           <p># of commits</p>
+  //         </RepoCard>
+  //         <RepoCard className="repoCard">
+  //           <p>repo 1</p>
+  //           <p># of commits</p>
+  //         </RepoCard>
+  //         <RepoCard className="repoCard">
+  //           <p>repo 1</p>
+  //           <p># of commits</p>
+  //         </RepoCard>
+  //       </div>
