@@ -48,6 +48,10 @@ const Boxes = styled.div`
   padding-bottom: 2rem;
   box-shadow: 0px 5px 5px 10px #0a9aec;
   margin: 15px 5px 15px 5px;
+
+  @media (max-width: 800px) {
+    background-color: red;
+  }
 `;
 
 const TeamCard = (props) => {

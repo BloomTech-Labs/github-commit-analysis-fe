@@ -1,7 +1,3 @@
-/* body {
-  width: 100%;
-} */
-
 .spinner {
   animation: spinning 1s linear infinite;
 }
@@ -67,9 +63,9 @@
 .repocard:hover{
   box-shadow: 2px 0px 2px 0px #0a9aec;
   width: 253px;
-  height: 79px;
+  height: 30px;
   margin-top: -9px;
-  padding: 2%;
+  padding: 5%;
 }
 
 .searchme {
@@ -102,4 +98,8 @@
   display: flex;
   flex-direction: row;
   margin: 20px 1px 10px 0px;
+}
+
+#repo-name {
+  width: 90%;
 }
