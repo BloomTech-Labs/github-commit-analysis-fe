@@ -95,7 +95,7 @@ const Header = () => {
 const Layout = ({ children }) => (
   <Box bg="#fefefe">
     <Header />
-    <Box marginX="auto" width="100%" paddingX="2rem">
+    <Box marginX="auto" width="100%">
       {children}
     </Box>
     <Footer />

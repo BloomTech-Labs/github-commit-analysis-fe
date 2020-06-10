@@ -3,7 +3,6 @@ import { Text, Box, Flex, ButtonOutline } from '@primer/components';
 import styled from 'styled-components';
 
 const logoImage = require('../images/Gitstats-logo-color-02.png');
-
 const Logo = styled.img`
 display: block;
 height: 120px;
@@ -17,7 +16,7 @@ const LoginButton = () => (
 
 export default () => (
 
-  <Box marginTop='5.5rem' marginBottom='1rem'>
+  <Box width="100%" marginTop='5.5rem' marginBottom='1rem'>
     <Flex
         width='100%'
         padding='1rem'

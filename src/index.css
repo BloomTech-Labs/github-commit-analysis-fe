@@ -1,3 +1,7 @@
+body {
+  max-width:100%;
+}
+
 .spinner {
   animation: spinning 1s linear infinite;
 }
