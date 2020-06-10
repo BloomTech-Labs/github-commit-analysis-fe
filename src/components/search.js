@@ -1,15 +1,9 @@
-//   const RepoConatiner = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   width: 300px;
-//   height: 100vh;
-//   overflow: scroll;
-// `;
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { useAppState } from '../context/app-state-context';
-const RepoConatiner = styled.div`
+const RepoContainer = styled.div`
 display: flex;
 flex-direction: column;
 width: 300px;
@@ -48,8 +42,9 @@ const RepoSearch = () => {
       <form
       onSubmit={handleSubmit}
       >
-        <label htmlFor="repo-name">Repo Name:</label>
+        <label htmlFor="repo-name"></label>
         <input
+          placeholder="search my repos"
           id="repo-name"
           name="repo-name"
           type="text"
@@ -58,16 +53,16 @@ const RepoSearch = () => {
         />
         <button>Search</button>
       </form>
-      <RepoConatiner>
+      <RepoContainer>
         { filterList.length === 0 ?
           repoList.map(repo => {
-            return <button key={repo.id}>{repo.name}</button>
+            return <div className="repocard" key={repo.id}>{repo.name}</div>
           }) :
           filterList.map(repo => {
-            return <button key={repo.id}>{repo.name}</button>
+            return <div key={repo.id}>{repo.name}</div>
           })
         }
-      </RepoConatiner>
+      </RepoContainer>
     </div>
   )
 };
