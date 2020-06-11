@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
-import ImageHolder from "../img/DashboardPlaceholder.jpg";
 import RepoContainer from "../components/search";
+import { useAppState } from '../context/app-state-context';
 
 const Holder = styled.div`
   display: flex;
@@ -88,12 +88,20 @@ const BoardTwo = styled.div`
   padding: 5px;
 `;
 
-const MyDashboard = () => {
+const MyDashboard = () => {  
+    const {
+      state: { user },
+    } = useAppState();
+
   return (
     <Holder>
       <SideOne>
-        <ProfilePic src={ImageHolder} alt="profile pic"></ProfilePic>
         <RepoContainer />
+        <ProfilePic src={user.avatarUrl} alt="profile pic"></ProfilePic>
+        <h4>{`Name: ${user.name}`}</h4>
+        <h5>{`Bio: ${user.bio}`}</h5>
+        <h5>{`Location: ${user.location}`}</h5>
+        <UserRepos />
       </SideOne>
       <SideTwo>
         <SearchUsers>
