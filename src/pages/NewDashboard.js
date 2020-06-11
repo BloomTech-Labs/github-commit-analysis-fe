@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
 import ImageHolder from "../img/DashboardPlaceholder.jpg";
-import UserRepos from "../components/search";
+import RepoContainer from "../components/search";
 
 const Holder = styled.div`
   display: flex;
@@ -93,7 +93,7 @@ const MyDashboard = () => {
     <Holder>
       <SideOne>
         <ProfilePic src={ImageHolder} alt="profile pic"></ProfilePic>
-        <UserRepos />
+        <RepoContainer />
       </SideOne>
       <SideTwo>
         <SearchUsers>
