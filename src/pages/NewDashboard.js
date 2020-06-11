@@ -96,12 +96,11 @@ const MyDashboard = () => {
   return (
     <Holder>
       <SideOne>
-        <RepoContainer />
         <ProfilePic src={user.avatarUrl} alt="profile pic"></ProfilePic>
         <h4>{`Name: ${user.name}`}</h4>
         <h5>{`Bio: ${user.bio}`}</h5>
         <h5>{`Location: ${user.location}`}</h5>
-        <UserRepos />
+        <RepoContainer />
       </SideOne>
       <SideTwo>
         <SearchUsers>
