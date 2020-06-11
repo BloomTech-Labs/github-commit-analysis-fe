@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
-import UserRepos from "../components/search";
+import RepoContainer from "../components/search";
 import { useAppState } from '../context/app-state-context';
 
 const Holder = styled.div`
@@ -100,7 +100,7 @@ const MyDashboard = () => {
         <h4>{`Name: ${user.name}`}</h4>
         <h5>{`Bio: ${user.bio}`}</h5>
         <h5>{`Location: ${user.location}`}</h5>
-        <UserRepos />
+        <RepoContainer />
       </SideOne>
       <SideTwo>
         <SearchUsers>
