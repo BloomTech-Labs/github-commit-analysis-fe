@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
 import RepoContainer from "../components/search";
 import { useAppState } from '../context/app-state-context';
+import RepoInfoCard from '../components/RepoInfoCard';
 
 const Holder = styled.div`
   display: flex;
@@ -116,7 +117,8 @@ const MyDashboard = () => {
         </ToggleHolder>
         <BoardHolder>
           <BoardOne>
-            <h6>box one</h6>
+            {/* <h6>box one</h6> */}
+            <RepoInfoCard />
           </BoardOne>
           <BoardTwo>
             <h6>box two</h6>
