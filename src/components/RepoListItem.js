@@ -1,24 +1,25 @@
 import React from 'react';
-import { Button, ButtonOutline } from '@primer/components';
 
 const RepoListItem = (repository, key, state, setState, clickHandler) => {
   if (state.activeItem && state.activeItem.id === repository.id)
     return (
-      <Button
+      <div
+        className="repocard"
         key={key}
         onClick={() => clickHandler(state, setState, repository)}
       >
         {repository.name}
-      </Button>
+      </div>
     );
   else
     return (
-      <ButtonOutline
+      <div
+        className="repocard"
         key={key}
         onClick={() => clickHandler(state, setState, repository)}
       >
         {repository.name}
-      </ButtonOutline>
+      </div>
     );
 };
 
