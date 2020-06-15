@@ -59,7 +59,7 @@ const RepoSearch = () => {
             return <div className="repocard" key={repo.id}>{repo.name}</div>
           }) :
           filterList.map(repo => {
-            return <div key={repo.id}>{repo.name}</div>
+            return <div className="repocard" key={repo.id}>{repo.name}</div>
           })
         }
       </RepoContainer>
