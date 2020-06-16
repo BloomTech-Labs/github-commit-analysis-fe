@@ -16,7 +16,7 @@ const LoginButton = () => (
 
 export default () => (
 
-  <Box width="100%" marginTop='5.5rem' marginBottom='1rem'>
+  <Box width="97%" marginTop='5.5rem' marginBottom='1rem'>
     <Flex
         width='100%'
         padding='1rem'

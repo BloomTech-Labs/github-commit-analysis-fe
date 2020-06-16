@@ -7,13 +7,14 @@ import RepoInfoCard from '../components/RepoInfoCard';
 
 const Holder = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 const SideOne = styled.div`
   flex-direction: column;
   margin: 10px 0px 30px 0px;
   border-right: 1px solid #dcdcdc;
+  padding-left: 2rem;
 `;
 
 const SideTwo = styled.div`
