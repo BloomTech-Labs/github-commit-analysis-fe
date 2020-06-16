@@ -9,11 +9,10 @@ import {
 import { useAppState } from './context/app-state-context';
 import { Layout } from './components';
 import { FullPageSpinner } from './components';
-import MyDashboard from "./pages/NewDashboard"
+
 const Home = React.lazy(() => import('./pages/home'));
 const About = React.lazy(() => import('./pages/About'));
-
-const Dashboard = React.lazy(() => import('./pages/dashboard'));
+const MyDashboard = React.lazy(() => import('./pages/NewDashboard'));
 
 export const App = () => {
   const { state } = useAppState();
@@ -21,17 +20,14 @@ export const App = () => {
   return (
     <Router>
       <Switch>
-      <Route exact path='/dashboard'>
-            <Layout><MyDashboard /></Layout>
-        </Route>
         <Route exact path='/'>
           <Suspense fallback={<FullPageSpinner />}>
-            <Layout>{state.user ? <Dashboard /> : <Home />}</Layout>
+            <Layout>{state.user ? <MyDashboard /> : <Home />}</Layout>
           </Suspense>
         </Route>
         <Route exact path='/about'>
           <Suspense fallback={<FullPageSpinner />}>
-            <Layout>{state.user ? <Dashboard /> : <About />}</Layout>
+            <Layout>{state.user ? <MyDashboard /> : <About />}</Layout>
           </Suspense>
         </Route>
         <Route exact path='/callback' render={() => <Redirect to='/' />} />
