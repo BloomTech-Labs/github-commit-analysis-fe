@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { useAppState } from '../context/app-state-context';
+import RepoListItem from '../components/RepoListItem';
+
 const RepoContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -14,9 +16,13 @@ const RepoSearch = () => {
   const {
     state: { token },
   } = useAppState();
+
+  const { state, setState, repositoryListItemClickHandler } = useAppState();
+
   const [repoList, setRepoList] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
   const [filterList, setFilterList] = useState(repoList);
+  
   useEffect(() => {
     axios
     .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
@@ -27,9 +33,11 @@ const RepoSearch = () => {
     })
     .catch(() => null);
   }, [token]);
+  
   const handleChange = e => {
     setSearchTerm(e.target.value)
   };
+  
   const handleSubmit = e => {
     e.preventDefault();
     const searchResults = repoList.filter(repo => {
@@ -37,6 +45,7 @@ const RepoSearch = () => {
     })
     setFilterList(searchResults);
   };
+  
   return (
     <div>
       <form
@@ -55,12 +64,24 @@ const RepoSearch = () => {
       </form>
       <RepoContainer>
         { filterList.length === 0 ?
-          repoList.map(repo => {
-            return <div className="repocard" key={repo.id}>{repo.name}</div>
-          }) :
-          filterList.map(repo => {
-            return <div className="repocard" key={repo.id}>{repo.name}</div>
-          })
+          repoList.map((repository, index) => 
+            RepoListItem(
+              repository,
+              index,
+              state,
+              setState,
+              repositoryListItemClickHandler
+            )
+          ) :
+          filterList.map((repository, index) => 
+          RepoListItem(
+            repository,
+            index,
+            state,
+            setState,
+            repositoryListItemClickHandler
+           )
+          )
         }
       </RepoContainer>
     </div>
