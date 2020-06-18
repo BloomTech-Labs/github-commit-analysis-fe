@@ -14,18 +14,17 @@ describe('Cypress Test for Home Page on Heroku', () => {
         cy.visit('https://commit-analysis.herokuapp.com/')
         cy.contains('Home').click()
     });
-    it('tests the about link on the home page', () => {
+    it('tests whether the About link navigates to the About Page and sees Mission statement', () => {
         cy.visit('https://commit-analysis.herokuapp.com/')
         cy.contains('About').click()
+        cy.request('/about')
+        cy.contains('Mission').should('be.visible')
     });
-    it('tests whether the About link navigates to the About Page and sees Mission statement', async () => {
-        cy.visit('https://commit-analysis.herokuapp.com/')
-        cy.contains('About').click()
-        await cy.url().should('include', 'Mission')
+   it('tests the about link on the home page', () => {
+       cy.visit('https://commit-analysis.herokuapp.com/')
+       cy.contains('About').click()
     });
-    it('tests the "Login with Github" button on the home page', async () => {
-        cy.visit('https://commit-analysis.herokuapp.com/')
-        cy.contains('Login with GitHub').click()
-        await cy.url('https://commit-analysis-be.herokuapp.com/auth/github/').should('include', 'Authorize')
+    it('tests the GitHub Login Button', () => {
+        cy.request('https://commit-analysis-be.herokuapp.com/auth/github/').its('body').should('include', 'Gitstats1')
     });
 });
