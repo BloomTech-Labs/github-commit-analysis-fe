@@ -78,7 +78,7 @@ export default [
   {
     id: 9,
     pic: Matt,
-    name: "Matther Orth",
+    name: "Matthew Orth",
     bio: "Lambda School student Currently in LabsPT11",
     github: "https://github.com/mattorth",
     linkedIn: "https://www.linkedin.com/in/matthew-orth/"
