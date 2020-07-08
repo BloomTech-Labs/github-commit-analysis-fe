@@ -4,10 +4,12 @@ import ".../../font-awesome/css/font-awesome.min.css";
 import RepoContainer from "../components/search";
 import { useAppState } from '../context/app-state-context';
 import RepoInfoCard from '../components/RepoInfoCard';
+import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import TabNav from '../components/TabNav';
 
 const Holder = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 
 const SideOne = styled.div`
@@ -36,7 +38,7 @@ const ProfilePic = styled.img`
 const SearchUsers = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 80px 40px 0px 0px;
+  margin: 80px 40px 30px 0px;
 `;
 
 const ToggleHolder = styled.div`
@@ -111,20 +113,8 @@ const MyDashboard = () => {
             <i className="fa fa-search fa-lg" aria-hidden="true"></i>
           </button>
         </SearchUsers>
-        <ToggleHolder>
-          <Toggle>Slider 1</Toggle>
-          <Toggle>Slider 2</Toggle>
-          <Toggle>Slider 3</Toggle>
-        </ToggleHolder>
-        <BoardHolder>
-          <BoardOne>
-            {/* <h6>box one</h6> */}
-            <RepoInfoCard />
-          </BoardOne>
-          <BoardTwo>
-            <h6>box two</h6>
-          </BoardTwo>
-        </BoardHolder>
+        <TabNav />
+        <RepoInfoCard />
       </SideTwo>
     </Holder>
   );
