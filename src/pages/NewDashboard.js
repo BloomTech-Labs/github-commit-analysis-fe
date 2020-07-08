@@ -4,7 +4,6 @@ import ".../../font-awesome/css/font-awesome.min.css";
 import RepoContainer from "../components/search";
 import { useAppState } from '../context/app-state-context';
 import RepoInfoCard from '../components/RepoInfoCard';
-import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import TabNav from '../components/TabNav';
 
 const Holder = styled.div`
@@ -39,57 +38,6 @@ const SearchUsers = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 80px 40px 30px 0px;
-`;
-
-const ToggleHolder = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 60px 65px 10px 0px;
-`;
-
-const Toggle = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  font-weight: bold;
-  color: #0a9aec;
-  width: 150px;
-  margin: 10px 60px 10px 100px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: white;
-  border: 2px solid #0a9aec;
-  transition: transform 2s;
-  &:hover {
-    background-color: #0a9aec;
-    color: white;
-    width: 155px;
-    height: auto;
-  }
-`;
-
-const BoardHolder = styled.div`
-  margin: 50px 40px 100px 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border: 2px solid gray;
-  max-width: 99%;
-`;
-const BoardOne = styled.div`
-  border: 1px solid gray;
-  flex-direction: row;
-  width: 490px;
-  height: 500px;
-  padding: 5px;
-`;
-
-const BoardTwo = styled.div`
-  flex-direction: row;
-  border: 1px solid gray;
-  width: 490px;
-  height: 500px;
-  padding: 5px;
 `;
 
 const MyDashboard = () => {  
