@@ -22,6 +22,7 @@ const RepoSearch = () => {
   const [repoList, setRepoList] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
   const [filterList, setFilterList] = useState(repoList);
+  const [sort, setSort] = useState("Sort");
   
   useEffect(() => {
     axios
@@ -33,6 +34,8 @@ const RepoSearch = () => {
     })
     .catch(() => null);
   }, [token]);
+
+  console.log(repoList);
   
   const handleChange = e => {
     setSearchTerm(e.target.value)
@@ -45,6 +48,10 @@ const RepoSearch = () => {
     })
     setFilterList(searchResults);
   };
+
+  const handleDropdown = e => {
+    setSort(e.target.value);
+  }
   
   return (
     <div>
@@ -61,6 +68,13 @@ const RepoSearch = () => {
           onChange={handleChange}
         />
         <button>Search</button>
+        <select value={sort} onChange={handleDropdown}>
+          <option value="Sort" disabled>Sort</option>
+          <option value="AZ">A-Z</option>
+          <option value="ZA">Z-A</option>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
       </form>
       <RepoContainer>
         { filterList.length === 0 ?
