@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components"
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
-import RepoInfoCard from './RepoInfoCard';
 import GraphHolder from './GraphHolder';
 
 const DashTabs = styled(Tabs)`
