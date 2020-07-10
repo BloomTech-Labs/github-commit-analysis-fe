@@ -25,8 +25,6 @@ const RepoSearch = () => {
     })
     .catch(() => null);
   }, [token]);
-
-  console.log(repoList);
   
   const handleChange = e => {
     setSearchTerm(e.target.value)
@@ -71,6 +69,7 @@ const RepoSearch = () => {
       <RepoListContainer 
         filterList={filterList}
         repoList={repoList}
+        sort={sort}
       />
     </div>
   )
