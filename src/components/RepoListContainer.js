@@ -14,7 +14,7 @@ overflow: scroll;
 const RepoListContainer = ({ filterList, repoList, sort }) => {
   const { state, setState, repositoryListItemClickHandler } = useAppState();
   
-  const repoListAsc = repoList.slice().sort(function(a, b){
+  const repoListAZ = repoList.slice().sort(function(a, b){
     var x = a.name.toLowerCase();
     var y = b.name.toLowerCase();
     if (x < y) {return -1;}
@@ -22,7 +22,7 @@ const RepoListContainer = ({ filterList, repoList, sort }) => {
     return 0;
   });
 
-  const filterListAsc = filterList.slice().sort(function(a, b){
+  const filterListAZ = filterList.slice().sort(function(a, b){
     var x = a.name.toLowerCase();
     var y = b.name.toLowerCase();
     if (x < y) {return -1;}
@@ -78,8 +78,6 @@ const RepoListContainer = ({ filterList, repoList, sort }) => {
     return 0;
   });
 
-  console.log('this', repoList);
-
   function SwitchCase({ sort }) {
     switch(sort) {
       default:
@@ -94,9 +92,9 @@ const RepoListContainer = ({ filterList, repoList, sort }) => {
       case 'AZ':
         return <div>
           { filterList.length === 0 ?
-          repoListAsc.map((repository, index) => 
+          repoListAZ.map((repository, index) => 
             RepoListItem(repository, index, state, setState, repositoryListItemClickHandler)) :
-          filterListAsc.map((repository, index) => 
+          filterListAZ.map((repository, index) => 
             RepoListItem(repository, index, state, setState, repositoryListItemClickHandler))
           }
         </div>;

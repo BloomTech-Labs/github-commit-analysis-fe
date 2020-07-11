@@ -40,7 +40,7 @@ const RepoSearch = () => {
 
   const handleDropdown = e => {
     setSort(e.target.value);
-  }
+  };
   
   return (
     <div>
