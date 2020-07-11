@@ -27,9 +27,10 @@ const SubHeading = styled.h4`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   height: inherit;
   justify-content: center;
+  margin-left: 30px;
 `
 
 const repoData = (repo, token) => {
