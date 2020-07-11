@@ -57,15 +57,14 @@ const RepoSearch = () => {
           onChange={handleChange}
         />
         <button>Search</button>
-        <select value={sort} onChange={handleDropdown}>
-          <option value="Sort" disabled>Sort</option>
-          <option value="AZ">A-Z</option>
-          <option value="ZA">Z-A</option>
-          <option value="newest">Newest First</option>
-          <option value="oldest">Oldest First</option>
-          <option value="favorite">Favorites</option>
-        </select>
       </form>
+      <select value={sort} onChange={handleDropdown}>
+        <option value="Sort" disabled>Sort</option>
+        <option value="AZ">A-Z</option>
+        <option value="ZA">Z-A</option>
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
       <RepoListContainer 
         filterList={filterList}
         repoList={repoList}
