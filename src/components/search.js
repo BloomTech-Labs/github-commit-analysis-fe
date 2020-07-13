@@ -1,27 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
 import { useAppState } from '../context/app-state-context';
-import RepoListItem from '../components/RepoListItem';
 
-const RepoContainer = styled.div`
-display: flex;
-flex-direction: column;
-width: 300px;
-height: 100vh;
-overflow: scroll;
-`
+import RepoListContainer from '../components/RepoListContainer';
+
 const RepoSearch = () => {
   const {
     state: { token },
   } = useAppState();
 
-  const { state, setState, repositoryListItemClickHandler } = useAppState();
-
   const [repoList, setRepoList] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
   const [filterList, setFilterList] = useState(repoList);
+  const [sort, setSort] = useState("Sort");
   
   useEffect(() => {
     axios
@@ -45,6 +37,10 @@ const RepoSearch = () => {
     })
     setFilterList(searchResults);
   };
+
+  const handleDropdown = e => {
+    setSort(e.target.value);
+  };
   
   return (
     <div>
@@ -62,28 +58,18 @@ const RepoSearch = () => {
         />
         <button>Search</button>
       </form>
-      <RepoContainer>
-        { filterList.length === 0 ?
-          repoList.map((repository, index) => 
-            RepoListItem(
-              repository,
-              index,
-              state,
-              setState,
-              repositoryListItemClickHandler
-            )
-          ) :
-          filterList.map((repository, index) => 
-          RepoListItem(
-            repository,
-            index,
-            state,
-            setState,
-            repositoryListItemClickHandler
-           )
-          )
-        }
-      </RepoContainer>
+      <select value={sort} onChange={handleDropdown}>
+        <option value="Sort" disabled>Sort</option>
+        <option value="AZ">A-Z</option>
+        <option value="ZA">Z-A</option>
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+      <RepoListContainer 
+        filterList={filterList}
+        repoList={repoList}
+        sort={sort}
+      />
     </div>
   )
 };
