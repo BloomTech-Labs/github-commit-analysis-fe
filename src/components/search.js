@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useAppState } from '../context/app-state-context';
 
 import RepoListContainer from '../components/RepoListContainer';
+import StarredContainer from '../components/StarredContainer';
 
 const RepoSearch = () => {
   const {
@@ -58,6 +59,7 @@ const RepoSearch = () => {
         />
         <button>Search</button>
       </form>
+      <StarredContainer repoList={repoList} />
       <select value={sort} onChange={handleDropdown}>
         <option value="Sort" disabled>Sort</option>
         <option value="AZ">A-Z</option>
@@ -65,6 +67,7 @@ const RepoSearch = () => {
         <option value="newest">Newest First</option>
         <option value="oldest">Oldest First</option>
       </select>
+      <h4>Repository List</h4>
       <RepoListContainer 
         filterList={filterList}
         repoList={repoList}
