@@ -49,7 +49,7 @@ const DetailView = ({ repo, token }) => {
   useEffect(() => {
     let data = repoData(repo, token) || null;
     setData(data);
-  }, []);
+  }, [repo, token]);
  
   return (
     <div>

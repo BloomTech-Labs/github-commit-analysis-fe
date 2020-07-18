@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import { useAppState } from '../context/app-state-context';
 
@@ -6,7 +6,6 @@ import RepoListContext from "../context/RepoListContext";
  
 function ToggleStarred(repository) {
   const {
-    // state: { token, repositories, activeItem },
     state: { token }
   } = useAppState();
 
