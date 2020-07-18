@@ -1,36 +1,16 @@
-// import React, { useEffect, useState } from 'react';
 import React, { useState, useContext } from 'react';
 
-// import axios from 'axios';
-
-// import { useAppState } from '../context/app-state-context';
 import RepoListContainer from '../components/RepoListContainer';
 import StarredContainer from '../components/StarredContainer';
 import RepoListContext from "../context/RepoListContext";
 
 
 const RepoSearch = () => {
-  // const {
-  //   state: { token, repositories },
-  // } = useAppState();
 
-  // const [repoList, setRepoList] = useState([])
   const { repoList } = useContext(RepoListContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterList, setFilterList] = useState(repoList);
   const [sort, setSort] = useState("Sort");
-
-  // useEffect(() => {
-  //   axios
-  //   .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
-  //     headers: { Authorization: `Bearer ${token}` },
-  //   })
-  //   .then((data) => {
-  //     setRepoList(data.data.repositories);
-  //   })
-  //   .catch(() => null);
-  // }, [token, repoList]);
-
 
   const handleChange = e => {
     setSearchTerm(e.target.value)
@@ -47,6 +27,7 @@ const RepoSearch = () => {
   };
   return (
     <div>
+      <StarredContainer repoList={repoList} />
       <form
       onSubmit={handleSubmit}
       >
@@ -61,7 +42,6 @@ const RepoSearch = () => {
         />
         <button>Search</button>
       </form>
-      <StarredContainer repoList={repoList} />
       <select value={sort} onChange={handleDropdown}>
         <option value="Sort" disabled>Sort</option>
         <option value="AZ">A-Z</option>

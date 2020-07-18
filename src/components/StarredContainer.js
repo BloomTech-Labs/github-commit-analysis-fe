@@ -4,8 +4,6 @@ import { useAppState } from '../context/app-state-context';
 
 import RepoListContext from "../context/RepoListContext";
 
-// import axios from 'axios'
-
 const StarredContainer = () => {
     const [ starredList, setStarredList] = useState([]);
     const [ results, setResults] = useState([]);
@@ -20,18 +18,6 @@ const StarredContainer = () => {
     useEffect(() => {
         setStarredList(results)
     }, [results]);
-
-
-    // useEffect(() => {
-    //     axios
-    //     .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
-    //       headers: { Authorization: `Bearer ${token}` },
-    //     })
-    //     .then((data) => {
-    //       setRepoList(data.data.repositories);
-    //     })
-    //     .catch(() => null);
-    //   }, [token, repoList ]);
     
   const { state, setState, repositoryListItemClickHandler } = useAppState();
   return (

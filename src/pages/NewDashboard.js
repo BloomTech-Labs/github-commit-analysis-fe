@@ -5,7 +5,6 @@ import RepoContainer from "../components/search";
 import { useAppState } from '../context/app-state-context';
 import RepoInfoCard from '../components/RepoInfoCard';
 import TabNav from '../components/TabNav';
-// import axios from 'axios';
 
 import RepoListContext from "../context/RepoListContext";
 
@@ -51,22 +50,6 @@ const MyDashboard = () => {
   } = useAppState();
 
   const { repoList,setRepoList } = useContext(RepoListContext);
-
-
-  // const [repoList, setRepoList] = useState([])
-
-
-  // useEffect(() => {
-  //   axios
-  //   .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
-  //     headers: { Authorization: `Bearer ${token}` },
-  //   })
-  //   .then((data) => {
-  //     setRepoList(data.data.repositories);
-  //   })
-  //   .catch(() => null);
-  // // }, [token, repoList]);
-  // }, [token]);
 
   return (
     <Holder>
