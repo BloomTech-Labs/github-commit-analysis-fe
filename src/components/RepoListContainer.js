@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import RepoListItem from '../components/RepoListItem';
 import { useAppState } from '../context/app-state-context';
+
+import RepoListContext from "../context/RepoListContext";
 
 const RepoContainer = styled.div`
 display: flex;
@@ -11,7 +13,9 @@ height: 100vh;
 overflow: scroll;
 `
 
-const RepoListContainer = ({ filterList, repoList, sort }) => {
+const RepoListContainer = ({ filterList, sort }) => {
+  const { repoList } = useContext(RepoListContext);
+
   const { state, setState, repositoryListItemClickHandler } = useAppState();
   
   const repoListAZ = repoList.slice().sort(function(a, b){
