@@ -1,35 +1,20 @@
-
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useAppState } from '../context/app-state-context';
+import React, { useState, useContext } from 'react';
 
 import RepoListContainer from '../components/RepoListContainer';
+import StarredContainer from '../components/StarredContainer';
+import RepoListContext from "../context/RepoListContext";
+
 
 const RepoSearch = () => {
-  const {
-    state: { token },
-  } = useAppState();
 
-  const [repoList, setRepoList] = useState([])
+  const { repoList } = useContext(RepoListContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterList, setFilterList] = useState(repoList);
   const [sort, setSort] = useState("Sort");
-  
-  useEffect(() => {
-    axios
-    .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-    .then((data) => {
-      setRepoList(data.data.repositories);
-    })
-    .catch(() => null);
-  }, [token]);
-  
+
   const handleChange = e => {
     setSearchTerm(e.target.value)
   };
-  
   const handleSubmit = e => {
     e.preventDefault();
     const searchResults = repoList.filter(repo => {
@@ -37,13 +22,12 @@ const RepoSearch = () => {
     })
     setFilterList(searchResults);
   };
-
   const handleDropdown = e => {
     setSort(e.target.value);
   };
-  
   return (
     <div>
+      <StarredContainer repoList={repoList} />
       <form
       onSubmit={handleSubmit}
       >
@@ -65,7 +49,8 @@ const RepoSearch = () => {
         <option value="newest">Newest First</option>
         <option value="oldest">Oldest First</option>
       </select>
-      <RepoListContainer 
+      <h4>Repository List</h4>
+      <RepoListContainer
         filterList={filterList}
         repoList={repoList}
         sort={sort}

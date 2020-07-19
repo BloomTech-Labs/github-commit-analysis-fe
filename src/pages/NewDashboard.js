@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
 import RepoContainer from "../components/search";
 import { useAppState } from '../context/app-state-context';
 import RepoInfoCard from '../components/RepoInfoCard';
 import TabNav from '../components/TabNav';
+
+import RepoListContext from "../context/RepoListContext";
 
 const Holder = styled.div`
   display: flex;
@@ -40,10 +42,14 @@ const SearchUsers = styled.div`
   margin: 80px 40px 30px 0px;
 `;
 
+
+
 const MyDashboard = () => {  
-    const {
-      state: { user },
-    } = useAppState();
+  const {
+    state: { user },
+  } = useAppState();
+
+  const { repoList,setRepoList } = useContext(RepoListContext);
 
   return (
     <Holder>
@@ -52,7 +58,7 @@ const MyDashboard = () => {
         <h4>{`Name: ${user.name}`}</h4>
         <h5>{`Bio: ${user.bio}`}</h5>
         <h5>{`Location: ${user.location}`}</h5>
-        <RepoContainer />
+        <RepoContainer repoList={repoList} />
       </SideOne>
       <SideTwo>
         <SearchUsers>
@@ -62,7 +68,7 @@ const MyDashboard = () => {
           </button>
         </SearchUsers>
         <TabNav />
-        <RepoInfoCard />
+        <RepoInfoCard setRepoList={setRepoList} />
       </SideTwo>
     </Holder>
   );
