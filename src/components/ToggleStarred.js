@@ -14,13 +14,11 @@ function ToggleStarred(repository) {
   const handleSubmit = (e) => {
     e.preventDefault();
     e.stopPropagation() 
-    console.log("this is refresh", refresh);
     const update = 
       {
         "update": !repository.repository.isStarred,
         "repoId": repository.repository.id
     }
-    console.log(repository.repository.isStarred)
     axios
       .put(`${process.env.REACT_APP_BACKEND_URL}/repo/starred`, update, {
         headers: { Authorization: `Bearer ${token}` },
@@ -28,7 +26,6 @@ function ToggleStarred(repository) {
       .then((res) => {
         repository.repository.isStarred = !repository.repository.isStarred;
          e.className = "notStarred";
-        console.log(res);
         setRefresh(!refresh)
       })
       .catch((err) => console.log(err));      

@@ -4,6 +4,7 @@ import ".../../font-awesome/css/font-awesome.min.css";
 import TeamCard from "../components/TeamCard";
 import data from "../data/TeamInfo";
 import MissionStatement from "../components/MissionStatement";
+import Footer from "../components/Footer";
 
 const CardHolder = styled.div`
   display: flex;
@@ -47,5 +48,6 @@ export default () => (
         })}
       </CardHolder>
     </About>
+    <Footer />
   </Aligner>
 );
