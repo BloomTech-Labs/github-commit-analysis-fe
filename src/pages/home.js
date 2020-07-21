@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Box, Flex, ButtonOutline } from '@primer/components';
+import { Text, Flex, ButtonOutline } from '@primer/components';
 import styled from 'styled-components';
 
 const logoImage = require('../images/Gitstats-logo-color-02.png');
