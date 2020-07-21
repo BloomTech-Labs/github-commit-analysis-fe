@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, Flex, ButtonOutline } from '@primer/components';
 import styled from 'styled-components';
+import Footer from '../components/Footer';
 
 const logoImage = require('../images/Gitstats-logo-color-02.png');
 
@@ -42,5 +43,6 @@ export default () => (
         Please log in with your GitHub account to access the dashboard
       </Text>
     </Flex>
+    <Footer />
   </MidDiv>
 );

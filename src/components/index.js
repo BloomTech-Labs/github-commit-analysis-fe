@@ -9,7 +9,6 @@ import {
   Fixed,
 } from "@primer/components";
 import { useAppState } from "../context/app-state-context.js";
-import Footer from "../components/Footer";
 import styled from "styled-components";
 const logoImage = require("../images/Gitstats-logo-white-02.png");
 
@@ -98,7 +97,6 @@ const Layout = ({ children }) => (
     <Box marginX="auto" width="100%">
       {children}
     </Box>
-    <Footer />
   </Box>
 );
 
