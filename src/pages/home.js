@@ -3,9 +3,17 @@ import { Text, Box, Flex, ButtonOutline } from '@primer/components';
 import styled from 'styled-components';
 
 const logoImage = require('../images/Gitstats-logo-color-02.png');
+
 const Logo = styled.img`
 display: block;
-height: 120px;
+height: 34%;
+`
+
+const MidDiv = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 97%;
 `
 
 const LoginButton = () => (
@@ -16,15 +24,17 @@ const LoginButton = () => (
 
 export default () => (
 
-  <Box width="97%" marginTop='5.5rem' marginBottom='1rem'>
+  <MidDiv >
     <Flex
         width='100%'
         padding='1rem'
         flexDirection={['column']}
         alignItems='center'
+        height='420px'
+        justifyContent='space-evenly'
       >
       <Logo  src={logoImage} alt={'Gitstats color logo'} />
-      <Text fontSize='1.8rem' fontFamily='Helvetica' marginBottom='3rem' marginTop='1rem'>
+      <Text fontSize='1.8rem' fontFamily='Helvetica' marginBottom='1rem'>
         An Objective Approach to Identifying Successful Repos
       </Text>
       <LoginButton />
@@ -32,5 +42,5 @@ export default () => (
         Please log in with your GitHub account to access the dashboard
       </Text>
     </Flex>
-  </Box>
+  </MidDiv>
 );
