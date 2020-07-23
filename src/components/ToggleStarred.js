@@ -33,7 +33,6 @@ function ToggleStarred(repository) {
       })
       .catch((err) => console.log(err));      
   };
- 
   return (
     <div>
       {repository.className === "notStarred" ? (
