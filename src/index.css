@@ -111,7 +111,6 @@ body {
 .notStarred {
   padding: 5px;
   background-color: black;
-  border-radius: 5px solid black;
   color: white;
 }
 
