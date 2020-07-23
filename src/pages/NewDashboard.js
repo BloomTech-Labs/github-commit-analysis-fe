@@ -18,9 +18,11 @@ const SideOne = styled.div`
   margin: 10px 0px 30px 0px;
   border-right: 1px solid #dcdcdc;
   padding-left: 2rem;
+
 `;
 
 const SideTwo = styled.div`
+  width: 90%;
   flex-direction: column;
   margin-bottom: 30px;
 `;

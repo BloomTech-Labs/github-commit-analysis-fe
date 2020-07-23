@@ -1,1 +1,5 @@
-{}
+{
+    "start": "PORT=3001 react-scripts -r @cypress/instrument-cra start",
+    "plugins": ["istanbul"]
+
+}

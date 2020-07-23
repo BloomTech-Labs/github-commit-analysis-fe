@@ -29,7 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "nyc mocha",
     "coverage": "npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open"
@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.8.1",
     "cypress": "^4.7.0"
   }
 }
