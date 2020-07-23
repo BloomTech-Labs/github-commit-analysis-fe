@@ -42,5 +42,6 @@ function ToggleStarred(repository) {
       ></i>
     </div>
   );
+
 }
 export default ToggleStarred;
