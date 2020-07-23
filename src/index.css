@@ -107,3 +107,16 @@ body {
 #repo-name {
   width: 90%;
 }
+
+.notStarred {
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px solid black;
+  color: white;
+  }
+  
+.star {
+  padding: 5px;
+  background-color: black;
+  color: yellow;
+  }
