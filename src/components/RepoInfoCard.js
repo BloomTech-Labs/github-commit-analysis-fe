@@ -1,6 +1,4 @@
-// import React, { useEffect, useState } from "react";
 import React from "react";
-// import axios from "axios";
 import styled from "styled-components";
 import ToggleStarred from "../components/ToggleStarred";
 import { useAppState } from "../context/app-state-context";
