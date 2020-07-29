@@ -48,16 +48,16 @@ const BoardHolder = styled.div`
 const BoardOne = styled.div`
   border: 1px solid gray;
   flex-direction: row;
-  width: 490px;
-  height: 500px;
+  width: 48%;
+  height: 50vh;
   padding: 5px;
 `;
 
 const BoardTwo = styled.div`
   flex-direction: row;
   border: 1px solid gray;
-  width: 490px;
-  height: 500px;
+  width: 48%;
+  height: 50vh;
   padding: 5px;
 `;
 

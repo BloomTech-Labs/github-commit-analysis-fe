@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Heading, Text } from "@primer/components";
+import { Flex, Heading } from "@primer/components";
 import styled from "styled-components";
 import ".../../font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -54,13 +54,18 @@ const Boxes = styled.div`
   }
 `;
 
+const Text = styled.p`
+text-align: center;
+`;
+
 const TeamCard = (props) => {
   return (
     <Box>
       <Boxes>
         <Pics src={props.pic} alt="profile pic" />
-        <Heading textAlign="center">{props.name}</Heading>
-        <Text as="p" textAlign="center">
+        <Heading id='heading' textAlign="center">{props.name}</Heading>
+        {/* as="p" textAlign="center" */}
+        <Text id="bio" >
           {props.bio}
         </Text>
         <Flex justifyContent="center">

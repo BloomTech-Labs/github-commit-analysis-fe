@@ -5,6 +5,13 @@
   "engines": {
     "node": "12.x"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  },
   "dependencies": {
     "@primer/components": "^18.1.0",
     "@sentry/browser": "^5.12.4",
