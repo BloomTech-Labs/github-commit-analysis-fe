@@ -1,30 +1,25 @@
-// describe('Cypress Test for Home Page on Heroku', () => {
-//     it('tests the GitStats Home Page is running on Heroku', () => {
-//         cy.visit('https://commit-analysis.herokuapp.com/')
-//     });
-//     it('finds content Login with GitHub on the Home Page', () => {
-//         cy.visit('https://commit-analysis.herokuapp.com/')
-//         cy.contains('Login with GitHub')
-//     });
-//     it('finds content Copyright on the Home Page', () => {
-//         cy.visit('https://commit-analysis.herokuapp.com/')
-//         cy.contains('Copyright')
-//     });
-//     it('tests the home link on the home page', () => {
-//         cy.visit('https://commit-analysis.herokuapp.com/')
-//         cy.contains('Home').click()
-//     });
-//     it('tests whether the About link navigates to the About Page and sees Mission statement', () => {
-//         cy.visit('https://commit-analysis.herokuapp.com/')
-//         cy.contains('About').click()
-//         cy.request('/about')
-//         cy.contains('Mission').should('be.visible')
-//     });
-//    it('tests the about link on the home page', () => {
-//        cy.visit('https://commit-analysis.herokuapp.com/')
-//        cy.contains('About').click()
-//     });
-//     it('tests the GitHub Login Button', () => {
-//         cy.request('https://commit-analysis-be.herokuapp.com/auth/github/').its('body').should('include', 'Gitstats1')
-//     });
-// });
+import React from 'react';
+import {render, cleanup} from '@testing-library/react';
+import Home from './home';
+import AppProviders from '../context';
+
+afterEach(cleanup)
+
+test("checks if there is only one element with the word Repos", () => {
+const { getAllByText } = render(<AppProviders><Home /></AppProviders>);
+const expected = 1;
+const result = getAllByText(/Repos/i);
+expect(result.length).toBe(expected);
+});
+
+test("checks if Gitstats logo is visible", () => {
+const { getByAltText } = render(<AppProviders><Home /></AppProviders>);
+const result = getByAltText(/gitstats color logo/i);
+expect(result).toBeVisible();
+});
+
+test("checks if footer is visible", () => {
+const { getByText } = render(<AppProviders><Home /></AppProviders>);
+const result = getByText(/@Copyright 2020/i);
+expect(result).toBeVisible();
+});
