@@ -23,6 +23,7 @@ const SideOne = styled.div`
 const SideTwo = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
+  width: 90%;
 `;
 
 const ProfilePic = styled.img`
