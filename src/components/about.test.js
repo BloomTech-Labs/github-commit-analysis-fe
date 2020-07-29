@@ -34,6 +34,5 @@ test("checks if profile pics are visible", () => {
   test("checks if a name is there", () => {
   const { getByText } = rtl.render(<AppProviders><About /></AppProviders>);
   const result = getByText(/Loralie Flint/i);
-  console.log(result)
   expect(result).toBeVisible();
   });
