@@ -5,11 +5,23 @@
   "engines": {
     "node": "12.x"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/database/**",
+      "!**/tests/**",
+      "!**/spec/**",
+      "!**/*.spec.{js,jsx}",
+      "!**/coverage/**"
+    ]
+  },
   "dependencies": {
     "@primer/components": "^18.1.0",
     "@sentry/browser": "^5.12.4",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
@@ -31,8 +43,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "npm run test -- --coverage --watchAll=false",
-    "eject": "react-scripts eject",
-    "cypress:open": "cypress open"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,7 +60,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "cypress": "^4.7.0"
-  }
+  "devDependencies": {}
 }
