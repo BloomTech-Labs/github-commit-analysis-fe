@@ -66,24 +66,29 @@ const Header = () => {
           <Logo src={logoImage} alt={"Gitstats white logo"} />
         </Heading>
         <Heading fontFamily="Helvetica" fontSize="1.0em" color="white">
-          <Link
-            href="/"
-            fontFamily="Helvetica"
-            fontSize="1.0em"
-            color="white"
-            marginRight="15px"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            fontFamily="Helvetica"
-            fontSize="1.0em"
-            color="white"
-            marginRight="15px"
-          >
-            About
-          </Link>
+          {!state.user ?
+            <span>
+              <Link
+                href="/"
+                fontFamily="Helvetica"
+                fontSize="1.0em"
+                color="white"
+                marginRight="15px"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                fontFamily="Helvetica"
+                fontSize="1.0em"
+                color="white"
+                marginRight="15px"
+              >
+                About
+              </Link>
+            </span> :
+            null
+          }
           {state.user ? <LogoutButton /> : <LoginButton />}
         </Heading>
       </Flex>
