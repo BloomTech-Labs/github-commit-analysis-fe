@@ -50,7 +50,7 @@ const MyDashboard = () => {
     state: { user },
   } = useAppState();
 
-  const { repoList,setRepoList } = useContext(RepoListContext);
+  const { repoList } = useContext(RepoListContext);
 
   return (
     <Holder>
@@ -69,7 +69,7 @@ const MyDashboard = () => {
           </button>
         </SearchUsers>
         <TabNav />
-        <RepoInfoCard setRepoList={setRepoList} />
+        <RepoInfoCard />
       </SideTwo>
     </Holder>
   );

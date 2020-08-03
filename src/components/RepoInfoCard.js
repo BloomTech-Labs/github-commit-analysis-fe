@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import styled from "styled-components";
 import ToggleStarred from "../components/ToggleStarred";
 import { useAppState } from "../context/app-state-context";
@@ -33,23 +32,23 @@ const Container = styled.div`
   margin-left: 30px;
 `;
  
-const repoData = (repo, token) => {
-  axios
-    .get(`${process.env.REACT_APP_BACKEND_URL}/repo/${repo.name}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-    .then((data) => data)
-    .catch(() => null);
-};
+// const repoData = (repo, token) => {
+//   axios
+//     .get(`${process.env.REACT_APP_BACKEND_URL}/repo/${repo.name}`, {
+//       headers: { Authorization: `Bearer ${token}` },
+//     })
+//     .then((data) => data)
+//     .catch(() => null);
+// };
  
 const DetailView = ({ repo, token }) => {
 
-  const [data, setData] = useState({})
+  // const [data, setData] = useState({})
   
-  useEffect(() => {
-    let data = repoData(repo, token) || null;
-    setData(data);
-  }, [repo, token]);
+  // useEffect(() => {
+  //   let data = repoData(repo, token) || null;
+  //   setData(data);
+  // }, [repo, token]);
  
   return (
     <div>
@@ -57,7 +56,7 @@ const DetailView = ({ repo, token }) => {
         <ToggleStarred repository={repo} />
         <TitleHeading>{repo.name}</TitleHeading>
       </div>
-      {data ? (
+      {/* {data ? (
         <p>when available, sentiment analysis goes here</p>
       ) : (
         <div>
@@ -69,7 +68,7 @@ const DetailView = ({ repo, token }) => {
             we can provide you with meaningful feedback!
           </StyledP>
         </div>
-      )}
+      )} */}
       <div>
         <SubHeading>Description:</SubHeading>
  
