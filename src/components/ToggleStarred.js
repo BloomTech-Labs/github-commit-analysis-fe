@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { useAppState } from '../context/app-state-context';
 
@@ -6,17 +6,16 @@ import RepoListContext from '../context/RepoListContext';
  
 function ToggleStarred(repository) {
   const {
-    state: { token }
+    state: { activeItem, token }
   } = useAppState();
 
-  const [classes, setClasses] = useState(true);
+  const [classes, setClasses] = useState(null);
 
   const { refresh, setRefresh } = useContext(RepoListContext);
  
   const handleSubmit = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    setClasses(!classes); 
     const update = 
       {
         "update": !repository.repository.isStarred,
@@ -28,11 +27,16 @@ function ToggleStarred(repository) {
       })
       .then((res) => {
         repository.repository.isStarred = !repository.repository.isStarred;
-         e.className = "notStarred";
-        setRefresh(!refresh)
+        e.className = "notStarred";
+        setRefresh(!refresh);
+        setClasses(!classes); 
       })
       .catch((err) => console.log(err));      
   };
+
+  useEffect(() => {
+    setClasses(repository.repository.isStarred);
+  }, [activeItem, repository.repository.isStarred]);
  
   return (
     <div>
