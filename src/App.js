@@ -27,6 +27,7 @@ export const App = () => {
 
   useEffect(() => {
     axios
+    // ${process.env.REACT_APP_BACKEND_URL}/auth/github
     .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
       headers: { Authorization: `Bearer ${state.token}` },
     })
