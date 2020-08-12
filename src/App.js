@@ -26,16 +26,16 @@ export const App = () => {
   const [repoList, setRepoList] = useState([]);
 
   useEffect(() => {
-    axios
-    // ${process.env.REACT_APP_BACKEND_URL}/auth/github
-    .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
-      headers: { Authorization: `Bearer ${state.token}` },
-    })
-    .then((data) => {
-      setRepoList(data.data.repositories);
-    })
-    .catch(() => null);
-  // }, [token, repoList]);
+    if (state.token) {
+      axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/repo`, {
+        headers: { Authorization: `Bearer ${state.token}` },
+      })
+      .then((data) => {
+        setRepoList(data.data.repositories);
+      })
+      .catch(() => null);
+    }
   }, [state.token, refresh]);
 
   return (

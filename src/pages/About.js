@@ -37,6 +37,7 @@ export default () => (
         {data.map((member) => {
           return (
             <TeamCard
+              key={member.id}
               pic={member.pic}
               name={member.name}
               bio={member.bio}
