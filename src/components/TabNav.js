@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components"
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
-import GraphHolder from './GraphHolder';
-import PlotlyHolder from './PlotlyHolder';
+// import GraphHolder from './GraphHolder';
+import Top10ContributorsPlot from './plotly/Top10ContributorsPlot';
+import YearlyCodeFrequency from './plotly/YearlyCodeFrequency';
+import YearlyCommitActivityPlot from './plotly/YearlyCommitActivityPlot';
+import { useAppState } from '../context/app-state-context';
 
 const DashTabs = styled(Tabs)`
 `;
@@ -63,41 +66,46 @@ const BoardTwo = styled.div`
 `;
 
 const TabNav = () => {
+    const {
+        state: { user, activeItem},
+      } = useAppState();
     return (
         <DashTabs selectedTabClassName='is-selected' selectedTabPanelClassName='is-selected'>
             <DashTabList>
-                <DashTab>Issues Comments</DashTab>
-                <DashTab>Merge Fraction</DashTab>
-                <DashTab>Code Frequency</DashTab>
+                <DashTab>Top 10 All-Time Contributors</DashTab>
+                <DashTab>Yearly Code Frequency</DashTab>
+                <DashTab>Yearly Commit Activity</DashTab>
             </DashTabList>
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        <h1>Panel 1</h1>
-                        <PlotlyHolder />
+                        {activeItem ? <Top10ContributorsPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>} 
                     </BoardOne>
                     <BoardTwo>
-                        <GraphHolder src="https://chart-studio.plotly.com/~npgeorge/50.embed" />
+                        <Top10ContributorsPlot username="kubernetes" repoName="kubernetes" />
+                        {/* <GraphHolder src="https://chart-studio.plotly.com/~npgeorge/50.embed" /> */}
                     </BoardTwo>
                 </BoardHolder>
             </DashTabPanel>
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        <h1>Panel 2</h1>
+                        {activeItem ? <YearlyCodeFrequency username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>} 
                     </BoardOne>
                     <BoardTwo>
-                        <GraphHolder src="https://chart-studio.plotly.com/~npgeorge/40.embed" />
+                        <YearlyCodeFrequency username="kubernetes" repoName="kubernetes" />
+                        {/* <GraphHolder src="https://chart-studio.plotly.com/~npgeorge/40.embed" /> */}
                     </BoardTwo>
                 </BoardHolder>
             </DashTabPanel>
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        <h1>Panel 3</h1>
+                        {activeItem ? <YearlyCommitActivityPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
                     </BoardOne>
                     <BoardTwo>
-                        <GraphHolder src="//chart-studio.plotly.com/~npgeorge/43.embed" />
+                        <YearlyCommitActivityPlot username="kubernetes" repoName="kubernetes"/>
+                        {/* <GraphHolder src="//chart-studio.plotly.com/~npgeorge/43.embed" /> */}
                     </BoardTwo>
                 </BoardHolder>
             </DashTabPanel>
