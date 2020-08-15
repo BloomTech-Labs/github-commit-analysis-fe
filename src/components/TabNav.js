@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components"
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import GraphHolder from './GraphHolder';
+import PlotlyHolder from './PlotlyHolder';
 
 const DashTabs = styled(Tabs)`
 `;
@@ -73,6 +74,7 @@ const TabNav = () => {
                 <BoardHolder>
                     <BoardOne>
                         <h1>Panel 1</h1>
+                        <PlotlyHolder />
                     </BoardOne>
                     <BoardTwo>
                         <GraphHolder src="https://chart-studio.plotly.com/~npgeorge/50.embed" />
