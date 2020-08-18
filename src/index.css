@@ -119,3 +119,7 @@ body {
   background-color: black;
   color: yellow;
 }
+
+.header {
+  z-index: 1;
+}

@@ -42,6 +42,7 @@ const Header = () => {
   const { state } = useAppState();
   return (
     <Box
+      className="header"
       as={Fixed}
       width="100%"
       top={0}
