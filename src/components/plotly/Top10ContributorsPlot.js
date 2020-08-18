@@ -13,7 +13,6 @@ const Top10ContributorsPlot = (props) => {
   } = useAppState();
 
   useEffect(() => {
-    if (user) {
     axios
     .get(`http://githubsuccessapi-env.eba-8utmmuhi.us-east-1.elasticbeanstalk.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
@@ -24,7 +23,6 @@ const Top10ContributorsPlot = (props) => {
     .catch((err) => {
       console.log("Error:", err);
     });
-    }
   }, [props.username, props.repoName, user.accessToken, user]);
     
     return (

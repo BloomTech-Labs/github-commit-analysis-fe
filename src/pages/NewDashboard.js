@@ -49,8 +49,6 @@ const MyDashboard = () => {
   const {
     state: { user },
   } = useAppState();
-  console.log("this is user", user);
-
 
   const { repoList } = useContext(RepoListContext);
 

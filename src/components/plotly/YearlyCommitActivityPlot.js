@@ -26,7 +26,6 @@ const YearlyCommitActivityPlot = (props) => {
     });
     }
   }, [props.username, props.repoName, user.accessToken, user]);
-  console.log("this is data", data);
 
   return (
     <Plot
