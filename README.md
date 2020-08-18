@@ -12,7 +12,53 @@ You can find the deployed project [HERE](https://commit-analysis.herokuapp.com/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![React](https://img.shields.io/badge/react-v16.12.0-blue.svg)
 
-## Contributors
+## list of links and resources
+https://docs.google.com/document/d/1zncksxCLfrR-m23zvb7jucV0p-_j_gzlHv1ofJPmuW8/edit?usp=sharing
+
+## Contributors LABSPT 11
+### Full Stack Web Developers
+Matthew Orth
+slack: @Matthew Orth
+github: https://github.com/mattorth
+
+Loralie Flint
+slack: @Laflint92
+github: https://github.com/LoralieFlint
+
+Heber Gonzalez
+slack: @Heber
+github: https://github.com/hebergonza719
+
+### Data Science
+Grant Wylie
+slack: @J
+github: https://github.com/iesous-kurios
+
+Guillermo Arria-Devoe
+slack: @Guillermo Arria-Devoe
+github: https://github.com/arriadevoe
+
+Nicholas George
+slack: @Nicholas George
+github: https://github.com/npgeorge
+
+### Team Lead
+Farid Hamida
+slack: @Farid Hamida
+email: farid-hamida@lambdastudents.com 
+
+### Section Lead
+Jacob Prudent
+slack: @Jacob Prudent
+email: jacob-prudent@lambdastudents.com 
+
+### engineering and product manager
+Derek Peters
+slack: @Derek
+email: derek.peters@lambdaschool.com 
+
+
+## Contributors LABS PT 7
 
 |                                                                                          [Dakota Pope](https://github.com/Dpgofast)                                                                                          |                                                                                       [Elisabeth Shah](https://github.com/ElisabethShah)                                                                                        |                                                                                         [Gwen Purcell](https://github.com/GwenStacey)                                                                                          |                                                    [Martin Lehman](https://github.com/martinclehman)                                                     |                                                                                     [Eric SarragaLugo](https://github.com/ericlugo)                                                                                     |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
