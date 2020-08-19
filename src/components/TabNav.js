@@ -5,6 +5,9 @@ import Top10ContributorsPlot from './plotly/Top10ContributorsPlot';
 import YearlyCodeFrequency from './plotly/YearlyCodeFrequency';
 import YearlyCommitActivityPlot from './plotly/YearlyCommitActivityPlot';
 import { useAppState } from '../context/app-state-context';
+import DailyCommitsPlot from './plotly/DailyCommitsPlot';
+import IssueActivityPlot from './plotly/IssueActivityPlot';
+import IssueCommentsPlot from './plotly/IssueCommentsPlot';
 
 const DashTabs = styled(Tabs)`
 `;
@@ -17,7 +20,7 @@ const DashTabList = styled(TabList)`
 DashTabList.tabsRole = 'TabList';
 
 const DashTab = styled(Tab)`
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #0A9AEC;
     
     :hover {
@@ -74,7 +77,11 @@ const TabNav = () => {
                 <DashTab>Yearly Commit Activity</DashTab>
                 <DashTab>Yearly Code Frequency</DashTab>
                 <DashTab>Top 10 All-Time Contributors</DashTab>
+                <DashTab>Daily Commits</DashTab>
+                <DashTab>Issue Activity</DashTab>
+                <DashTab>Issue Comments</DashTab>
             </DashTabList>
+            {/* number 1 */}
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
@@ -85,6 +92,7 @@ const TabNav = () => {
                     </BoardTwo>
                 </BoardHolder>
             </DashTabPanel>
+            {/* number 2 */}
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
@@ -95,6 +103,7 @@ const TabNav = () => {
                     </BoardTwo>
                 </BoardHolder>
             </DashTabPanel>
+            {/* number 3 */}
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
@@ -102,6 +111,39 @@ const TabNav = () => {
                     </BoardOne>
                     <BoardTwo>
                         <Top10ContributorsPlot username="kubernetes" repoName="kubernetes" />
+                    </BoardTwo>
+                </BoardHolder>
+            </DashTabPanel>
+            {/* number 4 */}
+            <DashTabPanel>
+                <BoardHolder>
+                    <BoardOne>
+                        {activeItem ? <DailyCommitsPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                    </BoardOne>
+                    <BoardTwo>
+                        <DailyCommitsPlot username="kubernetes" repoName="kubernetes"/>
+                    </BoardTwo>
+                </BoardHolder>
+            </DashTabPanel>
+            {/* number 5 */}
+            <DashTabPanel>
+                <BoardHolder>
+                    <BoardOne>
+                        {activeItem ? <IssueActivityPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                    </BoardOne>
+                    <BoardTwo>
+                        <IssueActivityPlot username="kubernetes" repoName="kubernetes"/>
+                    </BoardTwo>
+                </BoardHolder>
+            </DashTabPanel>
+            {/* number 6 */}
+            <DashTabPanel>
+                <BoardHolder>
+                    <BoardOne>
+                        {activeItem ? <IssueCommentsPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                    </BoardOne>
+                    <BoardTwo>
+                        <IssueCommentsPlot username="kubernetes" repoName="kubernetes"/>
                     </BoardTwo>
                 </BoardHolder>
             </DashTabPanel>
