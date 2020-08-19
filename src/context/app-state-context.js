@@ -46,7 +46,7 @@ const initialState = {
   token: null,
 };
 
-const AppStateContext = React.createContext();
+export const AppStateContext = React.createContext();
 
 export const AppStateProvider = ({ children, ...rest }) => {
   const hash = new URL(document.location).hash;
