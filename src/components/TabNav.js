@@ -71,7 +71,7 @@ const TabNav = () => {
     return (
         <DashTabs selectedTabClassName='is-selected' selectedTabPanelClassName='is-selected'>
             <DashTabList>
-                <DashTab>Yearly Commit Activity</DashTab>
+                <DashTab data-testid="tabNavTest">Yearly Commit Activity</DashTab>
                 <DashTab>Yearly Code Frequency</DashTab>
                 <DashTab>Top 10 All-Time Contributors</DashTab>
             </DashTabList>
