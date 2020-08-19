@@ -14,7 +14,7 @@ const Top10ContributorsPlot = (props) => {
 
   useEffect(() => {
     axios
-    .get(`http://githubsuccessapi-env.eba-8utmmuhi.us-east-1.elasticbeanstalk.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
+    .get(`https://ghsuccessapi.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {

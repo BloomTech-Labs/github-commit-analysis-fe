@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import { useAppState } from '../../context/app-state-context';
+import { Spinner } from '../../components';
+
 
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
@@ -17,7 +19,7 @@ const IssueActivityPlot = (props) => {
   useEffect(() => {
     async function getData () {
       await axios
-      .get(`http://githubsuccessapi-env.eba-8utmmuhi.us-east-1.elasticbeanstalk.com/visualization/issue-activity/${props.username}/${props.repoName}`, {
+      .get(`https://ghsuccessapi.com/visualization/issue-activity/7/${props.username}/${props.repoName}`, {
         headers: { Authorization: `${user.accessToken}`}
       })
       .then((response) => {
@@ -62,7 +64,7 @@ const IssueActivityPlot = (props) => {
         },
       }}
     /> :
-    null }
+    <Spinner /> }
     </div>
   );
 };

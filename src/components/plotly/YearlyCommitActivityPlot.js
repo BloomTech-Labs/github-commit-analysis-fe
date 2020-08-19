@@ -15,7 +15,7 @@ const YearlyCommitActivityPlot = (props) => {
   useEffect(() => {
     if (user) {
     axios
-    .get(`http://githubsuccessapi-env.eba-8utmmuhi.us-east-1.elasticbeanstalk.com/visualization/yearly-commit-activity/${props.username}/${props.repoName}`, {
+    .get(`https://ghsuccessapi.com/visualization/yearly-commit-activity/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
