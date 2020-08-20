@@ -6,16 +6,16 @@ import { useAppState } from '../../context/app-state-context';
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
-const YearlyCommitActivityPlot = (props) => {
+const DailyCommitsPlot = (props) => {
   const [data, setData] = useState({})
+
   const {
     state: { user },
   } = useAppState();
 
   useEffect(() => {
-    if (user) {
     axios
-    .get(`https://ghsuccessapi.com/visualization/yearly-commit-activity/${props.username}/${props.repoName}`, {
+    .get(`https://ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
@@ -24,24 +24,20 @@ const YearlyCommitActivityPlot = (props) => {
     .catch((err) => {
       console.log("Error:", err);
     });
-    }
   }, [props.username, props.repoName, user.accessToken, user]);
 
   return (
     <Plot
       data={[
         {
-          x: data.week,
-          y: data.total_commits,
+          x: data.day,
+          y: data.commits,
           type: "bar",
         },
       ]}
       layout={{
         width: "100%",
-        title: `Yearly Commit Activity: ${props.repoName}`,
-        // xaxis: {
-        //   tickangle: 45,
-        // },
+        title: `Last Week's Daily Commits: ${props.repoName}`,
         yaxis: {
           title: "Total Commits",
         },
@@ -50,4 +46,4 @@ const YearlyCommitActivityPlot = (props) => {
   );
 };
 
-export default YearlyCommitActivityPlot;
+export default DailyCommitsPlot;
