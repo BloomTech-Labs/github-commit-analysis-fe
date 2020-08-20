@@ -129,3 +129,41 @@ body {
 .header {
   z-index: 1;
 }
+
+.yearlyCommitActivity {
+  color: #003d7a;
+}
+
+.yearlyCodeFrequencyAdd {
+  color: #003d7a;
+}
+
+.yearlyCodeFrequencyDelete {
+  color: #FF8C00;
+}
+
+.allTimeContributors {
+  background: -webkit-linear-gradient(left #e83109, #FF8C00, brown );
+  background: -o-linear-gradient(right, #e83109, #FF8C00, brown);
+  background: -moz-linear-gradient(right, #e83109, #FF8C00,brown);
+  background: linear-gradient(to left, #e83109, brown, gray); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.DailyCommits {
+  color: #003d7a;
+
+}
+
+.IssueActivityOpen {
+  color: #003d7a;
+}
+
+.IssueActivityClosed {
+  color: #FF8C00;
+}
+
+.IssueComments {
+  color: #003d7a;
+}
