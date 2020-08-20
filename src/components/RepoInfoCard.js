@@ -16,12 +16,15 @@ const TitleHeading = styled.h2`
   font-weight: 900;
   font-family: Helvetica;
   color: #333333;
+  margin-bottom: 1.3rem;
 `;
 const SubHeading = styled.h4`
   font-size: 1rem;
   font-weight: 900;
   font-family: Helvetica;
   padding-bottom: 0.5rem;
+  color: #0a9aec;
+  margin-top: 1rem;
 `;
 const Container = styled.div`
   display: flex;
@@ -31,7 +34,7 @@ const Container = styled.div`
   justify-content: center;
   margin-left: 30px;
 `;
- 
+
 // const repoData = (repo, token) => {
 //   axios
 //     .get(`${process.env.REACT_APP_BACKEND_URL}/repo/${repo.name}`, {
@@ -40,16 +43,15 @@ const Container = styled.div`
 //     .then((data) => data)
 //     .catch(() => null);
 // };
- 
-const DetailView = ({ repo, token }) => {
 
+const DetailView = ({ repo, token }) => {
   // const [data, setData] = useState({})
-  
+
   // useEffect(() => {
   //   let data = repoData(repo, token) || null;
   //   setData(data);
   // }, [repo, token]);
- 
+
   return (
     <div>
       <div>
@@ -71,14 +73,14 @@ const DetailView = ({ repo, token }) => {
       )} */}
       <div>
         <SubHeading>Description:</SubHeading>
- 
+
         <StyledP>
           {repo.description ? repo.description : `No description provided`}
         </StyledP>
       </div>
- 
+
       <SubHeading>This repository has been:</SubHeading>
- 
+
       <RepoDetailSpan>{`Forked: ${repo.forkCount || 0} times`}</RepoDetailSpan>
       <br />
       <RepoDetailSpan>
@@ -86,15 +88,54 @@ const DetailView = ({ repo, token }) => {
       </RepoDetailSpan>
       <br />
       <RepoDetailSpan>{`Starred: ${repo.starCount || 0} times`}</RepoDetailSpan>
+      <TitleHeading>Graph Descriptions</TitleHeading>
+      <SubHeading>Yearly Commit Activity</SubHeading>
+      <p className="yearlyCommitActivity">
+        Returns total commits made each week for the last 12 months for the
+        requested repository.
+      </p>
+      <SubHeading>Yearly Code Frequency</SubHeading>
+      <p className="yearlyCodeFrequencyAdd">
+        Returns total additions made each month for the last 12 months for the
+        requested repository.
+      </p>
+      <p className="yearlyCodeFrequencyDelete">
+        Returns total deletions made each month for the last 12 months for the
+        requested repository.
+      </p>
+      <SubHeading>Top 10 All-Time Contributors</SubHeading>
+      <p className="allTimeContributors">
+        Returns the top 10 all-time contributors along with their total commits
+        and follower count for the requested repository.
+      </p>
+      <SubHeading>Daily Commits</SubHeading>
+      <p className="DailyCommits">
+        Returns daily commits over the last week for the requested repository.
+      </p>
+      <SubHeading>Issue Activity</SubHeading>
+      <p className="IssueActivityOpen">
+        Returns daily count of opened issues over the last 30 days
+        for the requested repository.
+      </p>
+      <p className="IssueActivityClosed">
+        Returns daily count of closed issues over the last 30 days
+        for the requested repository.
+      </p>
+      <SubHeading>Issue Comments</SubHeading>
+      <p className="IssueComments">
+        Returns all issues, their comment count, and body length for the last 7
+        days for the requested repository.
+      </p>
     </div>
   );
 };
- 
+
+
 const RepoInfoCard = () => {
   const {
     state: { activeItem, token },
   } = useAppState();
- 
+
   return (
     <Container>
       {activeItem ? (
@@ -109,5 +150,5 @@ const RepoInfoCard = () => {
     </Container>
   );
 };
- 
+
 export default RepoInfoCard;

@@ -101,6 +101,8 @@ const DetailView = ({ repo, token }) => {
       <Text fontFamily='Helvetica' color='#333333' pl='1rem'>{`${
         repo.starCount || 0
       } times`}</Text>
+
+  
     </React.Fragment>
   );
 };
