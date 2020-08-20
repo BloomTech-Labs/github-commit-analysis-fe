@@ -51,29 +51,28 @@ const BoardHolder = styled.div`
   border: 2px solid gray;
   max-width: 99%;
 `;
+
 const BoardOne = styled.div`
   border: 1px solid gray;
-  width: 50%;
+  width: 48%;
   height: 50vh;
   padding: 5px;
-  display: flex;
-  justify-content: center;
-	align-items: center;
 `;
 
 const BoardTwo = styled.div`
   border: 1px solid gray;
-  width: 50%;
+  width: 48%;
   height: 50vh;
   padding: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 `;
 
 const RepoMessage = () => {
     return (
-        <h4>Please select a repository from your list</h4>
+			<div className="repo-message">
+        <h4>Please select a repository from your list.</h4>
+				<br/>
+				<h4>Click a repo once to populate it's information and click it again to depopulate it.</h4>
+			</div>
     );
 };
 

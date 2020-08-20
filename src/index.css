@@ -167,3 +167,22 @@ body {
 .IssueComments {
   color: #003d7a;
 }
+
+.repo-message {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.repo-message h4 {
+  text-align: center;
+}
+
+.spinnerPlot-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

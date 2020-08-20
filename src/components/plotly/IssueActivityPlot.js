@@ -8,7 +8,7 @@ import { GoGitCommit } from "react-icons/go";
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
-const Spinner = (props) => <GoGitCommit className="spinnerPlot" {...props} />;
+const Spinner = () => <GoGitCommit className="spinnerPlot" />;
 
 const IssueActivityPlot = (props) => {
   const [data, setData] = useState()
@@ -64,7 +64,9 @@ const IssueActivityPlot = (props) => {
         },
       }}
     /> :
-    <Spinner /> }
+    <div className="spinnerPlot-container">
+      <Spinner />
+    </div> }
     </div>
   );
 };

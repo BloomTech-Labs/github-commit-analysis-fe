@@ -141,11 +141,7 @@ const RepoInfoCard = () => {
       {activeItem ? (
         <DetailView repo={activeItem} token={token} />
       ) : (
-        <StyledP>
-          Repository details will be populated in here. Click a repo once to
-          populate it's information and click it again to depopulate it. Or,
-          just click another repository!
-        </StyledP>
+        null
       )}
     </Container>
   );
