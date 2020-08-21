@@ -14,7 +14,7 @@ const Top10ContributorsPlot = (props) => {
 
   useEffect(() => {
     axios
-    .get(`https://ghsuccessapi.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
@@ -46,8 +46,9 @@ const Top10ContributorsPlot = (props) => {
           },
         ]}
         layout={{
-          width: "100%",
-          title: `Top 10 All-Time Contributors: ${props.repoName}`,
+          title: `Top 10 All-Time Contributors:` +
+          `<br>` + 
+          `${props.repoName}`,
           xaxis: {
             tickangle: 45,
           },
@@ -55,6 +56,8 @@ const Top10ContributorsPlot = (props) => {
             title: "Total Commits",
           },
         }}
+        useResizeHandler={true}
+        style={{width: "100%", height: "100%"}}
       />
     );
   };

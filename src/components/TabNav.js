@@ -22,15 +22,16 @@ DashTabList.tabsRole = 'TabList';
 const DashTab = styled(Tab)`
     font-size: 1.5rem;
     color: #0A9AEC;
-    
     :hover {
         color: black;
     }
-
     &.is-selected {
         color: black;
         padding-bottom: 2rem;
         border-bottom: 2px solid black;
+    }
+    @media (max-width: 1800px) {
+        font-size: 1rem;
     }
 `;
 
@@ -54,14 +55,14 @@ const BoardHolder = styled.div`
 
 const BoardOne = styled.div`
   border: 1px solid gray;
-  width: 48%;
+  width: 50%;
   height: 50vh;
   padding: 5px;
 `;
 
 const BoardTwo = styled.div`
   border: 1px solid gray;
-  width: 48%;
+  width: 50%;
   height: 50vh;
   padding: 5px;
 `;

@@ -19,7 +19,7 @@ const IssueActivityPlot = (props) => {
   useEffect(() => {
     async function getData () {
       await axios
-      .get(`https://ghsuccessapi.com/visualization/issue-activity/7/${props.username}/${props.repoName}`, {
+      .get(`https://www.ghsuccessapi.com/visualization/issue-activity/7/${props.username}/${props.repoName}`, {
         headers: { Authorization: `${user.accessToken}`}
       })
       .then((response) => {
@@ -53,8 +53,9 @@ const IssueActivityPlot = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Issue Activity for the Past 7 Days: ${props.repoName}`,
+        title: `Issue Activity for the Past 7 Days:` +
+        `<br>` + 
+        `${props.repoName}`,
         barmode: "stack",
         xaxis: {
           title: "Date Created"
@@ -63,6 +64,8 @@ const IssueActivityPlot = (props) => {
           title: "Count",
         },
       }}
+      useResizeHandler={true}
+      style={{width: "100%", height: "100%"}}
     /> :
     <div className="spinnerPlot-container">
       <Spinner />

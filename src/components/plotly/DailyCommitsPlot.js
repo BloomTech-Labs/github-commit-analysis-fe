@@ -15,7 +15,7 @@ const DailyCommitsPlot = (props) => {
 
   useEffect(() => {
     axios
-    .get(`https://ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
@@ -36,12 +36,15 @@ const DailyCommitsPlot = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Last Week's Daily Commits: ${props.repoName}`,
+        title: `Last Week's Daily Commits:` +
+        `<br>` + 
+        `${props.repoName}`,
         yaxis: {
           title: "Total Commits",
         },
       }}
+      useResizeHandler={true}
+      style={{width: "100%", height: "100%"}}
     />
   );
 };

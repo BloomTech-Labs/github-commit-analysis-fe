@@ -15,7 +15,7 @@ const YearlyCommitActivityPlot = (props) => {
   useEffect(() => {
     if (user) {
     axios
-    .get(`https://ghsuccessapi.com/visualization/yearly-commit-activity/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/yearly-commit-activity/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
@@ -37,8 +37,9 @@ const YearlyCommitActivityPlot = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Yearly Commit Activity: ${props.repoName}`,
+        title: `Yearly Commit Activity:` +
+        `<br>` + 
+        `${props.repoName}`,
         // xaxis: {
         //   tickangle: 45,
         // },
@@ -46,6 +47,8 @@ const YearlyCommitActivityPlot = (props) => {
           title: "Total Commits",
         },
       }}
+      useResizeHandler={true}
+      style={{width: "100%", height: "100%"}}
     />
   );
 };

@@ -15,7 +15,7 @@ const YearlyCodeFrequency = (props) => {
   useEffect(() => {
     if (user) {
     axios
-    .get(`https://ghsuccessapi.com/visualization/yearly-code-frequency/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/yearly-code-frequency/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
@@ -46,10 +46,13 @@ const YearlyCodeFrequency = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Yearly Code Frequency: ${props.repoName}`,
+        title: `Yearly Code Frequency:` +
+        `<br>` + 
+        `${props.repoName}`,
         barmode: "overlay"
       }}
+      useResizeHandler={true}
+      style={{width: "100%", height: "100%"}}
     />
   );
 };
