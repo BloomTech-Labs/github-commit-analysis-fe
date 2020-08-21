@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import createPlotlyComponent from "react-plotly.js/factory";
-import { useAppState } from "../../context/app-state-context";
-import { Spinner } from "../../components";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import createPlotlyComponent from 'react-plotly.js/factory';
+import { useAppState } from '../../context/app-state-context';
+import { GoGitCommit } from "react-icons/go";
 
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
-const IssueActivityPlot = (props) => {
-  const [data, setData] = useState();
 
+const Spinner = () => <GoGitCommit className="spinnerPlot" />;
+
+const IssueActivityPlot = (props) => {
+  const [data, setData] = useState()
   const {
     state: { user },
   } = useAppState();
@@ -55,7 +57,7 @@ const IssueActivityPlot = (props) => {
           ]}
           layout={{
             title:
-              `<b>Issue Activity for the Past 30 Days:</b>` +
+              `<b>Issue Activity for the Past 7 Days:</b>` +
               "<br>" +
               `${props.repoName}`,
             barmode: "stack",

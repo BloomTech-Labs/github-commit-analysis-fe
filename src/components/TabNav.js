@@ -54,26 +54,36 @@ const BoardHolder = styled.div`
   border: 2px solid gray;
   max-width: 99%;
 `;
+
 const BoardOne = styled.div`
   border: 1px solid gray;
-  flex-direction: row;
   width: 50%;
   height: 50vh;
   padding: 5px;
 `;
 
 const BoardTwo = styled.div`
-  flex-direction: row;
   border: 1px solid gray;
   width: 50%;
   height: 50vh;
   padding: 5px;
 `;
 
+const RepoMessage = () => {
+    return (
+			<div className="repo-message">
+        <h4>Please select a repository from your list.</h4>
+				<br/>
+				<h4>Click a repo once to populate it's information and click it again to depopulate it.</h4>
+			</div>
+    );
+};
+
 const TabNav = () => {
     const {
         state: { user, activeItem},
       } = useAppState();
+
     return (
         <DashTabs selectedTabClassName='is-selected' selectedTabPanelClassName='is-selected'>
             <DashTabList>
@@ -88,7 +98,7 @@ const TabNav = () => {
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        {activeItem ? <YearlyCommitActivityPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                        {activeItem ? <YearlyCommitActivityPlot username={user.login} repoName={activeItem.name} /> : <RepoMessage />}
                     </BoardOne>
                     <BoardTwo>
                         <YearlyCommitActivityPlot username="kubernetes" repoName="kubernetes"/>
@@ -99,7 +109,7 @@ const TabNav = () => {
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        {activeItem ? <YearlyCodeFrequency username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>} 
+                        {activeItem ? <YearlyCodeFrequency username={user.login} repoName={activeItem.name} /> : <RepoMessage />} 
                     </BoardOne>
                     <BoardTwo>
                         <YearlyCodeFrequency username="kubernetes" repoName="kubernetes" />
@@ -110,7 +120,7 @@ const TabNav = () => {
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        {activeItem ? <Top10ContributorsPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>} 
+                        {activeItem ? <Top10ContributorsPlot username={user.login} repoName={activeItem.name} /> : <RepoMessage />} 
                     </BoardOne>
                     <BoardTwo>
                         <Top10ContributorsPlot username="kubernetes" repoName="kubernetes" />
@@ -121,7 +131,7 @@ const TabNav = () => {
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        {activeItem ? <DailyCommitsPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                        {activeItem ? <DailyCommitsPlot username={user.login} repoName={activeItem.name} /> : <RepoMessage />}
                     </BoardOne>
                     <BoardTwo>
                         <DailyCommitsPlot username="kubernetes" repoName="kubernetes"/>
@@ -132,7 +142,7 @@ const TabNav = () => {
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        {activeItem ? <IssueActivityPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                        {activeItem ? <IssueActivityPlot username={user.login} repoName={activeItem.name} /> : <RepoMessage />}
                     </BoardOne>
                     <BoardTwo>
                         <IssueActivityPlot username="kubernetes" repoName="kubernetes"/>
@@ -143,7 +153,7 @@ const TabNav = () => {
             <DashTabPanel>
                 <BoardHolder>
                     <BoardOne>
-                        {activeItem ? <IssueCommentsPlot username={user.login} repoName={activeItem.name} /> : <div>Please select a repository from your list</div>}
+                        {activeItem ? <IssueCommentsPlot username={user.login} repoName={activeItem.name} /> : <RepoMessage />}
                     </BoardOne>
                     <BoardTwo>
                         <IssueCommentsPlot username="kubernetes" repoName="kubernetes"/>

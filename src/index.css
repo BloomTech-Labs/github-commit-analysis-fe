@@ -6,6 +6,12 @@ body {
   animation: spinning 1s linear infinite;
 }
 
+.spinnerPlot {
+  animation: spinning 1s linear infinite;
+  width: 75px;
+  height: 75px;
+}
+
 .full_page_spinner {
   font-size: 5rem;
   height: 100vh;
@@ -160,4 +166,23 @@ body {
 
 .IssueComments {
   color: #003d7a;
+}
+
+.repo-message {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.repo-message h4 {
+  text-align: center;
+}
+
+.spinnerPlot-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
