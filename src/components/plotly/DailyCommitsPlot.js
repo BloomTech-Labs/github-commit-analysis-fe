@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import createPlotlyComponent from 'react-plotly.js/factory';
-import { useAppState } from '../../context/app-state-context';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import createPlotlyComponent from "react-plotly.js/factory";
+import { useAppState } from "../../context/app-state-context";
 
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
 const DailyCommitsPlot = (props) => {
-  const [data, setData] = useState({})
+  const [data, setData] = useState({});
 
   const {
     state: { user },
@@ -15,15 +15,18 @@ const DailyCommitsPlot = (props) => {
 
   useEffect(() => {
     axios
-    .get(`https://ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`, {
-      headers: { Authorization: `${user.accessToken}`}
-    })
-    .then((response) => {
-      setData(JSON.parse(response.data));
-    })
-    .catch((err) => {
-      console.log("Error:", err);
-    });
+      .get(
+        `https://ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`,
+        {
+          headers: { Authorization: `${user.accessToken}` },
+        }
+      )
+      .then((response) => {
+        setData(JSON.parse(response.data));
+      })
+      .catch((err) => {
+        console.log("Error:", err);
+      });
   }, [props.username, props.repoName, user.accessToken, user]);
 
   return (
@@ -37,11 +40,17 @@ const DailyCommitsPlot = (props) => {
       ]}
       layout={{
         width: "100%",
-        title: `Last Week's Daily Commits: ${props.repoName}`,
+        title:
+          `<b>Last Week's Daily Commits:</b>` + "<br>" + `${props.repoName}`,
         yaxis: {
           title: "Total Commits",
         },
+        titlefont: {
+          size: 12,
+        },
       }}
+      useResizeHandler={true}
+      style={{ width: "100%", height: "100%", fontSize: "3px" }}
     />
   );
 };

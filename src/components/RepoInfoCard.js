@@ -25,6 +25,7 @@ const SubHeading = styled.h4`
   padding-bottom: 0.5rem;
   color: #0a9aec;
   margin-top: 1rem;
+
 `;
 const Container = styled.div`
   display: flex;

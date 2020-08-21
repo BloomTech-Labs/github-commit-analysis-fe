@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import createPlotlyComponent from 'react-plotly.js/factory';
-import { useAppState } from '../../context/app-state-context';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import createPlotlyComponent from "react-plotly.js/factory";
+import { useAppState } from "../../context/app-state-context";
 
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
 const YearlyCodeFrequency = (props) => {
-  const [data, setData] = useState({})
+  const [data, setData] = useState({});
   const {
     state: { user },
   } = useAppState();
 
   useEffect(() => {
     if (user) {
-    axios
-    .get(`https://ghsuccessapi.com/visualization/yearly-code-frequency/${props.username}/${props.repoName}`, {
-      headers: { Authorization: `${user.accessToken}`}
-    })
-    .then((response) => {
-      setData(JSON.parse(response.data));
-    })
-    .catch((err) => {
-      console.log("Error:", err);
-    });
+      axios
+        .get(
+          `https://ghsuccessapi.com/visualization/yearly-code-frequency/${props.username}/${props.repoName}`,
+          {
+            headers: { Authorization: `${user.accessToken}` },
+          }
+        )
+        .then((response) => {
+          setData(JSON.parse(response.data));
+        })
+        .catch((err) => {
+          console.log("Error:", err);
+        });
     }
   }, [props.username, props.repoName, user.accessToken, user]);
 
@@ -35,21 +38,25 @@ const YearlyCodeFrequency = (props) => {
           y: data.additions,
           type: "bar",
           name: "Additions",
-          "marker.color": "green"
+          "marker.color": "green",
         },
         {
           x: data.week,
           y: data.deletions,
           type: "bar",
           name: "Deletions",
-          "marker.color": "red"
+          "marker.color": "red",
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Yearly Code Frequency: ${props.repoName}`,
-        barmode: "overlay"
+        title: `<b>Yearly Code Frequency:</b>` + "<br>" + `${props.repoName}`,
+        barmode: "overlay",
+        titlefont: {
+          size: 12,
+        },
       }}
+      useResizeHandler={true}
+      style={{ width: "100%", height: "100%", fontSize: "3px" }}
     />
   );
 };

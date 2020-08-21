@@ -11,6 +11,9 @@ import RepoListContext from "../context/RepoListContext";
 const Holder = styled.div`
   display: flex;
   justify-content: flex-start;
+  @media (max-width: 1800px) {
+    max-width: 100%
+  }
 `;
 
 const SideOne = styled.div`

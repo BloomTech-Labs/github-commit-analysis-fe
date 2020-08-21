@@ -32,6 +32,9 @@ const DashTab = styled(Tab)`
         padding-bottom: 2rem;
         border-bottom: 2px solid black;
     }
+    @media (max-width: 1800px) {
+        font-size: 0.9rem;
+    }
 `;
 
 DashTab.tabsRole = 'Tab';
@@ -54,7 +57,7 @@ const BoardHolder = styled.div`
 const BoardOne = styled.div`
   border: 1px solid gray;
   flex-direction: row;
-  width: 48%;
+  width: 50%;
   height: 50vh;
   padding: 5px;
 `;
@@ -62,7 +65,7 @@ const BoardOne = styled.div`
 const BoardTwo = styled.div`
   flex-direction: row;
   border: 1px solid gray;
-  width: 48%;
+  width: 50%;
   height: 50vh;
   padding: 5px;
 `;
