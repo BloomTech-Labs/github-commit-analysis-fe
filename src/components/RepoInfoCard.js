@@ -35,14 +35,50 @@ const Container = styled.div`
   margin-left: 30px;
 `;
 
-// const repoData = (repo, token) => {
-//   axios
-//     .get(`${process.env.REACT_APP_BACKEND_URL}/repo/${repo.name}`, {
-//       headers: { Authorization: `Bearer ${token}` },
-//     })
-//     .then((data) => data)
-//     .catch(() => null);
-// };
+const GraphDescription = () => {
+  return (
+    <div>
+      <TitleHeading>Graph Descriptions</TitleHeading>
+      <SubHeading>Yearly Commit Activity</SubHeading>
+      <p className="yearlyCommitActivity">
+        Returns total commits made each week for the last 12 months for the
+        requested repository.
+      </p>
+      <SubHeading>Yearly Code Frequency</SubHeading>
+      <p className="yearlyCodeFrequencyAdd">
+        Returns total additions made each month for the last 12 months for the
+        requested repository.
+      </p>
+      <p className="yearlyCodeFrequencyDelete">
+        Returns total deletions made each month for the last 12 months for the
+        requested repository.
+      </p>
+      <SubHeading>Top 10 All-Time Contributors</SubHeading>
+      <p className="allTimeContributors">
+        Returns the top 10 all-time contributors along with their total commits
+        and follower count for the requested repository.
+      </p>
+      <SubHeading>Daily Commits</SubHeading>
+      <p className="DailyCommits">
+        Returns daily commits over the last week for the requested repository.
+      </p>
+      <SubHeading>Issue Activity</SubHeading>
+      <p className="IssueActivityOpen">
+        Returns daily count of opened issues over the last 30 days
+        for the requested repository.
+      </p>
+      <p className="IssueActivityClosed">
+        Returns daily count of closed issues over the last 30 days
+        for the requested repository.
+      </p>
+      <SubHeading>Issue Comments</SubHeading>
+      <p className="IssueComments">
+        Returns all issues, their comment count, and body length for the last 7
+        days for the requested repository.
+      </p>
+    </div>
+  );
+};
 
 const DetailView = ({ repo, token }) => {
   // const [data, setData] = useState({})
@@ -88,44 +124,7 @@ const DetailView = ({ repo, token }) => {
       </RepoDetailSpan>
       <br />
       <RepoDetailSpan>{`Starred: ${repo.starCount || 0} times`}</RepoDetailSpan>
-      <TitleHeading>Graph Descriptions</TitleHeading>
-      <SubHeading>Yearly Commit Activity</SubHeading>
-      <p className="yearlyCommitActivity">
-        Returns total commits made each week for the last 12 months for the
-        requested repository.
-      </p>
-      <SubHeading>Yearly Code Frequency</SubHeading>
-      <p className="yearlyCodeFrequencyAdd">
-        Returns total additions made each month for the last 12 months for the
-        requested repository.
-      </p>
-      <p className="yearlyCodeFrequencyDelete">
-        Returns total deletions made each month for the last 12 months for the
-        requested repository.
-      </p>
-      <SubHeading>Top 10 All-Time Contributors</SubHeading>
-      <p className="allTimeContributors">
-        Returns the top 10 all-time contributors along with their total commits
-        and follower count for the requested repository.
-      </p>
-      <SubHeading>Daily Commits</SubHeading>
-      <p className="DailyCommits">
-        Returns daily commits over the last week for the requested repository.
-      </p>
-      <SubHeading>Issue Activity</SubHeading>
-      <p className="IssueActivityOpen">
-        Returns daily count of opened issues over the last 30 days
-        for the requested repository.
-      </p>
-      <p className="IssueActivityClosed">
-        Returns daily count of closed issues over the last 30 days
-        for the requested repository.
-      </p>
-      <SubHeading>Issue Comments</SubHeading>
-      <p className="IssueComments">
-        Returns all issues, their comment count, and body length for the last 7
-        days for the requested repository.
-      </p>
+      <GraphDescription />
     </div>
   );
 };
@@ -141,7 +140,7 @@ const RepoInfoCard = () => {
       {activeItem ? (
         <DetailView repo={activeItem} token={token} />
       ) : (
-        null
+        <GraphDescription />
       )}
     </Container>
   );
