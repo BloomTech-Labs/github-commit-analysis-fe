@@ -36,12 +36,15 @@ const DailyCommitsPlot = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Last Week's Daily Commits: ${props.repoName}`,
+        title: `Last Week's Daily Commits:` +
+        `<br>` + 
+        `${props.repoName}`,
         yaxis: {
           title: "Total Commits",
         },
       }}
+      useResizeHandler={true}
+      style={{width: "100%", height: "100%"}}
     />
   );
 };

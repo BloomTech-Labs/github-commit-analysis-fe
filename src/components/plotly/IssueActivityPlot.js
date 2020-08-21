@@ -53,8 +53,9 @@ const IssueActivityPlot = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
-        title: `Issue Activity for the Past 30 Days: ${props.repoName}`,
+        title: `Issue Activity for the Past 30 Days:` +
+        `<br>` + 
+        `${props.repoName}`,
         barmode: "stack",
         xaxis: {
           title: "Date Created"
@@ -63,6 +64,8 @@ const IssueActivityPlot = (props) => {
           title: "Count",
         },
       }}
+      useResizeHandler={true}
+      style={{width: "100%", height: "100%"}}
     /> :
     <Spinner /> }
     </div>
