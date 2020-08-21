@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import { useAppState } from '../../context/app-state-context';
-import { Spinner } from '../../components';
-
+// import { Spinner } from '../../components';
+import { GoGitCommit } from "react-icons/go";
 
 const Plotly = window.Plotly;
 const Plot = createPlotlyComponent(Plotly);
 
+const Spinner = () => <GoGitCommit className="spinnerPlot" />;
+
 const IssueActivityPlot = (props) => {
-
   const [data, setData] = useState()
-
   const {
     state: { user },
   } = useAppState();
@@ -54,7 +54,7 @@ const IssueActivityPlot = (props) => {
       ]}
       layout={{
         width: "100%",
-        title: `Issue Activity for the Past 30 Days: ${props.repoName}`,
+        title: `Issue Activity for the Past 7 Days: ${props.repoName}`,
         barmode: "stack",
         xaxis: {
           title: "Date Created"
@@ -64,7 +64,9 @@ const IssueActivityPlot = (props) => {
         },
       }}
     /> :
-    <Spinner /> }
+    <div className="spinnerPlot-container">
+      <Spinner />
+    </div> }
     </div>
   );
 };
