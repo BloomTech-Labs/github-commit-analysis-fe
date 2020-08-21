@@ -15,7 +15,7 @@ const DailyCommitsPlot = (props) => {
 
   useEffect(() => {
     axios
-    .get(`https://ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/daily-commits/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {

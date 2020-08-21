@@ -15,7 +15,7 @@ const YearlyCodeFrequency = (props) => {
   useEffect(() => {
     if (user) {
     axios
-    .get(`https://ghsuccessapi.com/visualization/yearly-code-frequency/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/yearly-code-frequency/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {

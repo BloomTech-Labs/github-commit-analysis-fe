@@ -19,7 +19,7 @@ const IssueActivityPlot = (props) => {
   useEffect(() => {
     async function getData () {
       await axios
-      .get(`https://ghsuccessapi.com/visualization/issue-activity/7/${props.username}/${props.repoName}`, {
+      .get(`https://www.ghsuccessapi.com/visualization/issue-activity/7/${props.username}/${props.repoName}`, {
         headers: { Authorization: `${user.accessToken}`}
       })
       .then((response) => {
@@ -53,7 +53,6 @@ const IssueActivityPlot = (props) => {
         },
       ]}
       layout={{
-        width: "100%",
         title: `Issue Activity for the Past 7 Days:` +
         `<br>` + 
         `${props.repoName}`,

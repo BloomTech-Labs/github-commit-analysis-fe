@@ -17,7 +17,7 @@ const IssueCommentsPlot = (props) => {
   useEffect(() => {
     async function getData () {
       await axios
-      .get(`https://ghsuccessapi.com/visualization/issue-comments/${props.username}/${props.repoName}`, {
+      .get(`https://www.ghsuccessapi.com/visualization/issue-comments/${props.username}/${props.repoName}`, {
         headers: { Authorization: `${user.accessToken}`}
       })
       .then((response) => {

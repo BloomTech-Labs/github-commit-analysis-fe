@@ -14,7 +14,7 @@ const Top10ContributorsPlot = (props) => {
 
   useEffect(() => {
     axios
-    .get(`https://ghsuccessapi.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
+    .get(`https://www.ghsuccessapi.com/visualization/top-10-contributors/${props.username}/${props.repoName}`, {
       headers: { Authorization: `${user.accessToken}`}
     })
     .then((response) => {
