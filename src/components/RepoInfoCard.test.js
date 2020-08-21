@@ -7,6 +7,6 @@ afterEach(cleanup)
 
 test('StyledP is rendered', () => {
   const { queryByText } = render(<AppProviders><RepoInfoCard /></AppProviders>);
-  const result = queryByText(/Repository details will/i);
+  const result = queryByText(/Graph Descriptions/i);
   expect(result).toBeTruthy(); 
 });
