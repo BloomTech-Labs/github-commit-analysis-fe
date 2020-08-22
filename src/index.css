@@ -186,3 +186,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.issue-activity-container {
+  height: 50vh;
+}
