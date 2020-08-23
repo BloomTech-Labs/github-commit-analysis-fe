@@ -121,7 +121,7 @@ const TabNav = () => {
     return (
         <DashTabs selectedTabClassName='is-selected' selectedTabPanelClassName='is-selected'>
             <DashTabList>
-                <DashTab data-testid="tabNavTest">Yearly Commit <br/> Activity</DashTab>
+                <DashTab data-testid="tabNavTest">Yearly <br/> Commit Activity</DashTab>
                 <DashTab>Yearly Code <br/> Frequency</DashTab>
                 <DashTab>All-Time <br/> Contributors</DashTab>
                 <DashTab>Daily <br/> Commits</DashTab>
@@ -129,7 +129,7 @@ const TabNav = () => {
                 <DashTab>Issue <br/> Comments</DashTab>
             </DashTabList>
             {/* number 1 */}
-            <TitleHeading>Graph Descriptions</TitleHeading>
+            <TitleHeading>Graph Description</TitleHeading>
             <DashTabPanel>
                 <SubHeading>Yearly Commit Activity</SubHeading>
                 <StyledP className="yearlyCommitActivity">
