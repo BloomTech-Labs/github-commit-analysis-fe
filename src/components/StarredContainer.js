@@ -1,8 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react';
 import RepoListItem from '../components/RepoListItem';
+import styled from "styled-components";
 import { useAppState } from '../context/app-state-context';
 
 import RepoListContext from "../context/RepoListContext";
+
+const StyledH4 = styled.h4`
+  color: #0366d6;
+`;
 
 const StarredContainer = () => {
     const [ starredList, setStarredList] = useState([]);
@@ -20,14 +25,24 @@ const StarredContainer = () => {
     }, [results]);
     
   const { state, setState, repositoryListItemClickHandler } = useAppState();
+  
+  const starredListAZ = starredList.slice().sort(function(a, b){
+    var x = a.name.toLowerCase();
+    var y = b.name.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+
   return (
   <div>
-    { starredList.length === 0
+    { starredListAZ.length === 0
     ? null
     : <div>
-      <h4>Starred List</h4>
-      {starredList.map((repository, index) =>
+      <StyledH4>Starred List</StyledH4>
+      {starredListAZ.map((repository, index) =>
       RepoListItem(repository, index, state, setState, repositoryListItemClickHandler))}
+      <hr className="horizontal-line"/>
       </div>
     }
   </div>

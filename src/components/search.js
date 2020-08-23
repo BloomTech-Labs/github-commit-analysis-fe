@@ -1,9 +1,14 @@
 import React, { useState, useContext } from 'react';
+import {ButtonOutline} from "@primer/components";
+import styled from "styled-components";
 
 import RepoListContainer from '../components/RepoListContainer';
 import StarredContainer from '../components/StarredContainer';
 import RepoListContext from "../context/RepoListContext";
 
+const StyledH4 = styled.h4`
+  color: #0366d6;
+`;
 
 const RepoSearch = () => {
 
@@ -28,8 +33,7 @@ const RepoSearch = () => {
   return (
     <div>
       <StarredContainer repoList={repoList} />
-      <form
-      onSubmit={handleSubmit}
+      <form className="search-form" onSubmit={handleSubmit}
       >
         <label htmlFor="repo-name"></label>
         <input
@@ -40,16 +44,17 @@ const RepoSearch = () => {
           value={searchTerm}
           onChange={handleChange}
         />
-        <button>Search</button>
+        <ButtonOutline id="search-button">Search</ButtonOutline>
       </form>
-      <select value={sort} onChange={handleDropdown}>
+      <hr className="horizontal-line"/>
+      <StyledH4>Repository List</StyledH4>
+      <select className="sort-dropdown" value={sort} onChange={handleDropdown}>
         <option value="Sort" disabled>Sort</option>
         <option value="AZ">A-Z</option>
         <option value="ZA">Z-A</option>
         <option value="newest">Newest First</option>
         <option value="oldest">Oldest First</option>
       </select>
-      <h4>Repository List</h4>
       <RepoListContainer
         filterList={filterList}
         repoList={repoList}
