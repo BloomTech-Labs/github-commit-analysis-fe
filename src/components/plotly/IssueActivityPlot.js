@@ -33,7 +33,7 @@ const IssueActivityPlot = (props) => {
   }, [props.username, props.repoName, user.accessToken, user]);
 
   return (
-    <div>
+    <div className="issue-activity-container">
     {data ? 
     <Plot
       data={[
