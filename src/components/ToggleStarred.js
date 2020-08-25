@@ -39,7 +39,7 @@ function ToggleStarred(repository) {
   }, [activeItem, repository.repository.isStarred]);
  
   return (
-    <div>
+    <div className="star-position">
       <i
         onClick={handleSubmit}
         className={

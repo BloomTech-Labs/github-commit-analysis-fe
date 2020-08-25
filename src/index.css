@@ -212,12 +212,6 @@ body {
   margin-right: 2rem;
 }
 
-@media only screen and (max-width: 1375px) {
-  .horizontal-line {
-    margin: 15px 0px;
-  }
-}
-
 #repo-name {
   width: 75%;
   font-size: 14px;
@@ -229,4 +223,43 @@ body {
 
 .main-text-color {
   color: #0366d6;
+}
+
+.repo-info-background {
+  background-image: url('./images/pexels-negative-space-34069.jpg');
+  background-size: cover;
+  height: 72vh;
+  margin-right: 30px;
+}
+
+#no-opacity {
+  opacity: initial;
+}
+
+.star-position {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+  .repo-info-background {
+    height: 87vh;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .repo-info-background {
+    height: 78vh;
+  }
+}
+
+@media only screen and (max-width: 1375px) {
+  .horizontal-line {
+    margin: 15px 0px;
+  }
+
+  .repo-info-background {
+    height: 87vh;
+  }
 }
