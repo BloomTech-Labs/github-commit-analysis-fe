@@ -18,6 +18,7 @@ const SideOne = styled.div`
   margin: 10px 0px 0px 0px;
   border-right: 1px solid #dcdcdc;
   padding-left: 2rem;
+  width: 300px;
 `;
 
 const SideTwo = styled.div`

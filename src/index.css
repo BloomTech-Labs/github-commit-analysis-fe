@@ -223,6 +223,7 @@ body {
 
 .main-text-color {
   color: #0366d6;
+  padding-right: 2rem;
 }
 
 .repo-info-background {
